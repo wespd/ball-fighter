@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c7jshwyf5wvip"]
 
 [ext_resource type="PackedScene" uid="uid://d18bcpnidh32y" path="res://ball.tscn" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://bi61odd1nqhbc" path="res://edge.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://y4gf131udgjo" path="res://peg.tscn" id="3_h2yge"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0xm2m"]
 normal = Vector2(1, 0)
@@ -24,8 +24,39 @@ distance = -180.0
 
 [node name="Ball" parent="." unique_id=260139811 instance=ExtResource("1_0xm2m")]
 z_index = 5
-position = Vector2(-36, -13)
-speed = 300.0
+position = Vector2(69, -21)
+
+[node name="Ball3" parent="." unique_id=560484325 instance=ExtResource("1_0xm2m")]
+z_index = 5
+position = Vector2(-25, 85)
+
+[node name="Ball4" parent="." unique_id=1971782723 instance=ExtResource("1_0xm2m")]
+z_index = 5
+position = Vector2(60, 97)
+
+[node name="Ball5" parent="." unique_id=996144897 instance=ExtResource("1_0xm2m")]
+z_index = 5
+position = Vector2(-48, -74)
+
+[node name="Ball6" parent="." unique_id=1473763551 instance=ExtResource("1_0xm2m")]
+z_index = 5
+position = Vector2(78, -89)
+
+[node name="Ball7" parent="." unique_id=2011055482 instance=ExtResource("1_0xm2m")]
+z_index = 5
+position = Vector2(-61, -134)
+
+[node name="Ball8" parent="." unique_id=914833392 instance=ExtResource("1_0xm2m")]
+z_index = 5
+position = Vector2(-123, 63)
+
+[node name="Ball9" parent="." unique_id=982862354 instance=ExtResource("1_0xm2m")]
+z_index = 5
+position = Vector2(-4, 16)
+
+[node name="Ball10" parent="." unique_id=980739661 instance=ExtResource("1_0xm2m")]
+z_index = 5
+position = Vector2(18, -121)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=188603996]
 layer = -10
@@ -56,22 +87,41 @@ grow_vertical = 2
 color = Color(0.41598046, 0.41598043, 0.4159804, 1)
 
 [node name="LeftEdge" type="StaticBody2D" parent="." unique_id=934983038]
-script = ExtResource("1_ig7tw")
+position = Vector2(4, 1)
+metadata/bounce_multiplier = 1.01
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftEdge" unique_id=1972778416]
 shape = SubResource("WorldBoundaryShape2D_0xm2m")
 
 [node name="RightEdge" type="StaticBody2D" parent="." unique_id=1446361020]
+position = Vector2(4, 1)
+metadata/bounce_multiplier = 1.01
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightEdge" unique_id=1950896313]
 shape = SubResource("WorldBoundaryShape2D_h2yge")
 
 [node name="UpperEdge" type="StaticBody2D" parent="." unique_id=248334358]
+position = Vector2(4, 1)
+metadata/bounce_multiplier = 1.01
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpperEdge" unique_id=1433374134]
 shape = SubResource("WorldBoundaryShape2D_1bvp3")
 
 [node name="LowerEdge" type="StaticBody2D" parent="." unique_id=821329915]
+position = Vector2(4, 1)
+metadata/bounce_multiplier = 1.01
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LowerEdge" unique_id=1213868640]
 shape = SubResource("WorldBoundaryShape2D_7dm0k")
+
+[node name="Ball2" parent="." unique_id=1279368000 instance=ExtResource("1_0xm2m")]
+position = Vector2(-101, -40)
+
+[node name="Peg" parent="." unique_id=322305095 instance=ExtResource("3_h2yge")]
+position = Vector2(-61, 26)
+
+[node name="Peg2" parent="." unique_id=582570703 instance=ExtResource("3_h2yge")]
+position = Vector2(-13, -42)
+
+[node name="Peg3" parent="." unique_id=1190681776 instance=ExtResource("3_h2yge")]
+position = Vector2(33, 28)
