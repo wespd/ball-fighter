@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://d18bcpnidh32y"]
+[gd_scene format=3 uid="uid://wuog8c3igqi1"]
 
 [ext_resource type="Script" uid="uid://dixxpmc8rr44b" path="res://ball.gd" id="1_41u45"]
-[ext_resource type="Texture2D" uid="uid://cd8wa6sq4808p" path="res://basic_ball.png" id="1_x8fbi"]
+[ext_resource type="Texture2D" uid="uid://bvnrdo1rpfgib" path="res://Sprites/ball.png" id="2_41u45"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_41u45"]
 radius = 16.0
@@ -13,7 +13,7 @@ script = ExtResource("1_41u45")
 modulate = Color(1, 0, 0, 1)
 z_index = 3
 z_as_relative = false
-texture = ExtResource("1_x8fbi")
+texture = ExtResource("2_41u45")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1209233224]
 shape = SubResource("CircleShape2D_41u45")
