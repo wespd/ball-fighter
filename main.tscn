@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c7jshwyf5wvip"]
 
 [ext_resource type="PackedScene" uid="uid://d18bcpnidh32y" path="res://ball.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dwsrph4ywts4u" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://y4gf131udgjo" path="res://peg.tscn" id="3_h2yge"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0xm2m"]
@@ -19,6 +20,7 @@ distance = -180.0
 distance = -180.0
 
 [node name="Main" type="Node2D" unique_id=1593915679]
+script = ExtResource("1_h2yge")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1631611814]
 
@@ -52,7 +54,7 @@ position = Vector2(-123, 63)
 
 [node name="Ball9" parent="." unique_id=982862354 instance=ExtResource("1_0xm2m")]
 z_index = 5
-position = Vector2(-4, 16)
+position = Vector2(-38, 47)
 
 [node name="Ball10" parent="." unique_id=980739661 instance=ExtResource("1_0xm2m")]
 z_index = 5

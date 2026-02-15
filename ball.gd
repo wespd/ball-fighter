@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Ball
 
 @export var speed : float = 300
 @export var max_speed : float = 1000
@@ -16,23 +17,31 @@ func _process(delta):
 	var collision_info = move_and_collide(motion)
 	
 	if collision_info:
-		var normal = collision_info.get_normal()
-		
-		direction = direction.bounce(normal).normalized()
-		
-		var collider = collision_info.get_collider()
-		if collider.has_method("on_collision"):
-			collider.on_collision(speed)
-		if collider.has_meta("bounce_multiplier"):
-			speed *= collider.get_meta("bounce_multiplier")
-		if speed > max_speed:
-			speed = max_speed
+		on_collision(collision_info)
 			
-func on_collision(damage : float):
+func on_collision(collision_info : KinematicCollision2D):
+	var normal = collision_info.get_normal()
+	direction = direction.bounce(normal).normalized()
+	$Sprite2D.scale = Vector2(abs(normal.y) + 1, abs(normal.x) + 1).normalized()
+	print(normal)
+	var collider = collision_info.get_collider()
+	if collider.has_method("take_damage_player"):
+		collider.take_damage_player(speed)
+		
+
+	if collider.has_meta("bounce_multiplier"):
+		speed *= collider.get_meta("bounce_multiplier")
+	if speed > max_speed:
+		speed = max_speed
+			
+func take_damage_enemy(damage : float):
 	print("%s took %s damage" %[name,damage])
 	current_health -= damage
 	if current_health <= 0:
-		queue_free()
+		on_death()
+		
+func on_death():
+	queue_free()
 		
 	
 	

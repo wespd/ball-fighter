@@ -1,17 +1,19 @@
 [gd_scene format=3 uid="uid://y4gf131udgjo"]
 
-[ext_resource type="Texture2D" uid="uid://cd8wa6sq4808p" path="res://basic_ball.png" id="1_y34qd"]
+[ext_resource type="Texture2D" uid="uid://cnhd6r6l232e0" path="res://Sprites/Pegs.png" id="1_y34qd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pwoe"]
+atlas = ExtResource("1_y34qd")
+region = Rect2(2, 2, 8, 8)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1pwoe"]
 radius = 4.0
 
 [node name="Peg" type="StaticBody2D" unique_id=322305095 groups=["bouncer"]]
-metadata/bounce_multiplier = 1.2
+metadata/bounce_multiplier = 1.1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=73081053]
-modulate = Color(0, 0, 0, 1)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_y34qd")
+texture = SubResource("AtlasTexture_1pwoe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1875391019]
 shape = SubResource("CircleShape2D_1pwoe")
