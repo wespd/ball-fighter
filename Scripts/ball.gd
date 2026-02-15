@@ -22,12 +22,9 @@ func _process(delta):
 func on_collision(collision_info : KinematicCollision2D):
 	var normal = collision_info.get_normal()
 	direction = direction.bounce(normal).normalized()
-	$Sprite2D.scale = Vector2(abs(normal.y) + 1, abs(normal.x) + 1).normalized()
-	print(normal)
 	var collider = collision_info.get_collider()
 	if collider.has_method("take_damage_player"):
 		collider.take_damage_player(speed)
-		
 
 	if collider.has_meta("bounce_multiplier"):
 		speed *= collider.get_meta("bounce_multiplier")

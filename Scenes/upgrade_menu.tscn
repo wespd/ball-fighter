@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://yqk223t1aug7"]
+
+[ext_resource type="Script" uid="uid://ulpe8err0svf" path="res://Scripts/UpgradeMenu/money_label.gd" id="1_ltp0x"]
+[ext_resource type="Texture2D" uid="uid://bqpc4donwrpcu" path="res://Sprites/icon.svg" id="2_11363"]
+
+[node name="UpgradeMenu" type="CanvasLayer" unique_id=1644143263]
+layer = 100
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=845191700]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MoneyLabel" type="RichTextLabel" parent="." unique_id=1002287845]
+anchors_preset = -1
+anchor_left = 0.009000001
+anchor_top = 0.014
+anchor_right = 0.089
+anchor_bottom = 0.049000002
+offset_left = -0.52000046
+offset_top = -0.07999992
+offset_right = 0.48000336
+offset_bottom = -0.2800026
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[color=green]52$[/color]"
+script = ExtResource("1_ltp0x")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1338015701]
+offset_left = 533.0
+offset_top = 247.0
+offset_right = 661.0
+offset_bottom = 375.0
+texture_normal = ExtResource("2_11363")
+texture_hover = ExtResource("2_11363")

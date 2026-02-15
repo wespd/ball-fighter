@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c7jshwyf5wvip"]
 
-[ext_resource type="PackedScene" uid="uid://d18bcpnidh32y" path="res://ball.tscn" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://dwsrph4ywts4u" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://y4gf131udgjo" path="res://peg.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://d18bcpnidh32y" path="res://Scenes/ball.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dwsrph4ywts4u" path="res://Scripts/main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://y4gf131udgjo" path="res://Scenes/peg.tscn" id="3_h2yge"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0xm2m"]
 normal = Vector2(1, 0)

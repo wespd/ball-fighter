@@ -13,11 +13,12 @@ config_version=5
 config/name="ball_fighter"
 run/main_scene="uid://c7jshwyf5wvip"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Sprites/icon.svg"
 
 [autoload]
 
 PlayerBall="*uid://brquq467iyivh"
+UpgradeGlobals="*uid://cdunodusbtyc"
 
 [display]
 
