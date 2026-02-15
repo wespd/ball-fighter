@@ -1,22 +1,77 @@
 [gd_scene format=3 uid="uid://c7jshwyf5wvip"]
 
+[ext_resource type="PackedScene" uid="uid://d18bcpnidh32y" path="res://ball.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bi61odd1nqhbc" path="res://edge.gd" id="1_ig7tw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0xm2m"]
+normal = Vector2(1, 0)
+distance = -180.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h2yge"]
+normal = Vector2(-1, 0)
+distance = -180.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bvp3"]
+normal = Vector2(0, 1)
+distance = -180.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7dm0k"]
+distance = -180.0
+
 [node name="Main" type="Node2D" unique_id=1593915679]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1631611814]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1714563956]
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+[node name="Ball" parent="." unique_id=260139811 instance=ExtResource("1_0xm2m")]
+z_index = 5
+position = Vector2(-36, -13)
+speed = 300.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=188603996]
+layer = -10
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1679420269]
+z_index = -1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1714563956]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35900003
+anchor_top = 0.25
+anchor_right = 0.64100003
+anchor_bottom = 0.75000006
+offset_left = 0.47998047
+offset_right = -0.4800415
+offset_bottom = -6.1035156e-05
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.41598046, 0.41598043, 0.4159804, 1)
-metadata/_edit_use_anchors_ = true
+
+[node name="LeftEdge" type="StaticBody2D" parent="." unique_id=934983038]
+script = ExtResource("1_ig7tw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftEdge" unique_id=1972778416]
+shape = SubResource("WorldBoundaryShape2D_0xm2m")
+
+[node name="RightEdge" type="StaticBody2D" parent="." unique_id=1446361020]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightEdge" unique_id=1950896313]
+shape = SubResource("WorldBoundaryShape2D_h2yge")
+
+[node name="UpperEdge" type="StaticBody2D" parent="." unique_id=248334358]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperEdge" unique_id=1433374134]
+shape = SubResource("WorldBoundaryShape2D_1bvp3")
+
+[node name="LowerEdge" type="StaticBody2D" parent="." unique_id=821329915]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerEdge" unique_id=1213868640]
+shape = SubResource("WorldBoundaryShape2D_7dm0k")
