@@ -24,7 +24,7 @@ func on_collision(collision_info : KinematicCollision2D):
 	
 	var collider = collision_info.get_collider()
 	if collider.has_method("take_damage_enemy"):
-		collider.take_damage_enemy(speed)
+		collider.take_damage_enemy(speed * damage_multiplier)
 		
 
 	if collider.has_meta("bounce_multiplier"):

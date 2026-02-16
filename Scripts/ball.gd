@@ -4,6 +4,7 @@ class_name Ball
 @export var speed : float = 300
 @export var max_speed : float = 1000
 @export var max_health : float = 4000
+@export var damage_multiplier : float = 1.0
 @onready var sprite_2d = $Sprite2D
 var is_stunned : bool = false
 var is_first_frame : bool = true

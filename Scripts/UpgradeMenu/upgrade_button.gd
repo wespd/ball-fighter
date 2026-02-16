@@ -1,7 +1,6 @@
 extends TextureButton
 class_name UpgradeButton
 
-@export var upgrade_description : String = ""
 @export var upgrades : Array[BaseUpgrade]
 @export var linked_buttons : Array[UpgradeButton]
 var current_upgrade : BaseUpgrade
