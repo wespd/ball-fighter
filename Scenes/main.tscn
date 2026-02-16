@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://d18bcpnidh32y" path="res://Scenes/ball.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://dwsrph4ywts4u" path="res://Scripts/level.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://oncbnrfwyhb" path="res://Scenes/void_peg.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://y4gf131udgjo" path="res://Scenes/peg.tscn" id="3_h2yge"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0xm2m"]
 normal = Vector2(1, 0)
@@ -131,3 +132,12 @@ position = Vector2(-136, 92)
 
 [node name="VoidPeg4" parent="." unique_id=848812103 instance=ExtResource("3_8gbba")]
 position = Vector2(140, 61)
+
+[node name="Peg" parent="." unique_id=322305095 instance=ExtResource("3_h2yge")]
+position = Vector2(-82, 6)
+
+[node name="Peg2" parent="." unique_id=162801599 instance=ExtResource("3_h2yge")]
+position = Vector2(59, -66)
+
+[node name="Peg3" parent="." unique_id=1529483174 instance=ExtResource("3_h2yge")]
+position = Vector2(56, 70)

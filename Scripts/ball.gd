@@ -39,6 +39,9 @@ func on_collision(collision_info : KinematicCollision2D):
 
 	if collider.has_meta("bounce_multiplier"):
 		speed *= collider.get_meta("bounce_multiplier")
+		for child in collider.get_children(true):
+			if child is AnimatedSprite2D:
+				child.play("default")
 	if speed > max_speed:
 		speed = max_speed
 			
