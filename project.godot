@@ -21,6 +21,7 @@ PlayerBall="*uid://brquq467iyivh"
 UpgradeGlobals="*uid://cdunodusbtyc"
 LevelManager="*uid://bopn51gblcnj2"
 UpgradeMenu="*uid://yqk223t1aug7"
+CollisionManager="*uid://i7koeqri31sp"
 
 [display]
 

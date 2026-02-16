@@ -18,25 +18,21 @@ func on_death():
 	print("Player died")
 
 func on_collision(collision_info : KinematicCollision2D):
+	CollisionManager.play_ran_into_something()
 	var normal = collision_info.get_normal()
 	
 	direction = direction.bounce(normal).normalized()
 	
 	var collider = collision_info.get_collider()
-	if collider.has_method("take_damage_enemy"):
-		collider.take_damage_enemy(speed * damage_multiplier)
-		
-
+	if collider is Ball:
+		CollisionManager.try_collision(self, collider)
 	if collider.has_meta("bounce_multiplier"):
 		speed *= collider.get_meta("bounce_multiplier")
+		for child in collider.get_children(true):
+			if child is AnimatedSprite2D:
+				child.play("default")
+			if child is ColorRect:
+				child.emit_shockwave()
 	if speed > max_speed:
 		speed = max_speed
 		
-func take_damage_enemy(damage : float):
-	pass
-	
-func take_damage_player(damage : float):
-	print("%s took %s damage" %[name,damage])
-	current_health -= damage
-	if current_health <= 0:
-		on_death()

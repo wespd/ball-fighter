@@ -20,29 +20,36 @@ func _ready():
 	velocity = direction.normalized() * speed
 	
 func _process(delta):
-	if is_stunned or is_first_frame:
+	if is_first_frame:
 		is_first_frame = false
 		return
-	var motion = direction * speed * delta
+	var motion = direction * speed * delta * (0 if is_stunned else 1)
 	var collision_info = move_and_collide(motion)
 	
 	if collision_info:
 		on_collision(collision_info)
 			
+			
+func bounce_off_surface(normal : Vector2):
+	direction = direction.bounce(normal).normalized()
+
 func on_collision(collision_info : KinematicCollision2D):
 	var normal = collision_info.get_normal()
 	direction = direction.bounce(normal).normalized()
 	var collider = collision_info.get_collider()
-	if collider.has_method("take_damage_player"):
-		print("%s hit player for damage!" %name)
-		collider.take_damage_player(speed)
+	
+	if collider == PlayerBall:
+		CollisionManager.try_collision(self, collider)
 
 	if collider.has_meta("bounce_multiplier"):
 		speed *= collider.get_meta("bounce_multiplier")
+		for child in collider.get_children(true):
+			if child is AnimatedSprite2D:
+				child.play("default")
 	if speed > max_speed:
 		speed = max_speed
 			
-func take_damage_enemy(damage : float):
+func take_damage(damage : float):
 	print("%s took %s damage" %[name,damage])
 	current_health -= damage
 	if current_health <= 0:

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c68fqg3mb316e" path="res://Scripts/player_ball.gd" id="1_m38xh"]
 [ext_resource type="Texture2D" uid="uid://dhf76eda4dvro" path="res://Sprites/Ball_death_animation.png" id="2_m38xh"]
+[ext_resource type="Script" uid="uid://chxtqsy5t4o55" path="res://Scripts/health_text.gd" id="3_k40wh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fsq41"]
 radius = 16.0
@@ -13,9 +14,9 @@ region = Rect2(0, 0, 32, 32)
 [node name="PlayerBall" type="CharacterBody2D" unique_id=911088835]
 z_index = 1
 script = ExtResource("1_m38xh")
-speed = 600.0
-max_speed = 2000.0
-max_health = 100.0
+speed = 350.0
+max_speed = 500.0
+max_health = 300.0
 metadata/_custom_type_script = "uid://dixxpmc8rr44b"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=316485454]
@@ -23,3 +24,14 @@ shape = SubResource("CircleShape2D_fsq41")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1900339853]
 texture = SubResource("AtlasTexture_k40wh")
+
+[node name="DebugHealthText" type="RichTextLabel" parent="." unique_id=902057176]
+offset_left = -52.0
+offset_top = -59.0
+offset_right = 52.0
+offset_bottom = -27.0
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_k40wh")
+metadata/_custom_type_script = "uid://chxtqsy5t4o55"
