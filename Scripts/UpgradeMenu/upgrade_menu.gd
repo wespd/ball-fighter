@@ -6,6 +6,7 @@ extends CanvasLayer
 @onready var next_level = $NextLevel
 
 func _ready():
+	hide()
 	for upgrade in upgrades:
 		upgrade.mouse_entered.connect(_on_upgrade_button_hovered.bind(upgrade))
 		upgrade.mouse_exited.connect(_on_upgrade_button_unhovered)

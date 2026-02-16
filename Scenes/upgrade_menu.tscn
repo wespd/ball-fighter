@@ -34,7 +34,6 @@ metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
 [node name="UpgradeMenu" type="CanvasLayer" unique_id=1644143263 node_paths=PackedStringArray("upgrades")]
 process_mode = 3
 layer = 100
-visible = false
 script = ExtResource("1_6gn5s")
 upgrades = [NodePath("UpgradeButton"), NodePath("UpgradeButton2"), NodePath("UpgradeButton3")]
 

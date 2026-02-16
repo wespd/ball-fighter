@@ -8,6 +8,8 @@ var current_upgrade : BaseUpgrade
 var current_index : int = 0
 
 func _ready():
+	for button in linked_buttons:
+		button.hide()
 	if not upgrades.is_empty():
 		current_upgrade = upgrades[0]
 	else:
