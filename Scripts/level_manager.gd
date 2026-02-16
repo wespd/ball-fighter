@@ -21,6 +21,7 @@ func spawn_level():
 		await get_tree().scene_changed
 	get_tree().current_scene.player_won.connect(on_player_won)
 	get_tree().paused = false
+	PlayerBall.current_health = PlayerBall.max_health
 	
 func on_player_won():
 	get_tree().paused = true

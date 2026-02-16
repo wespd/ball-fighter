@@ -63,7 +63,7 @@ animations = [{
 }]
 
 [node name="Peg" type="StaticBody2D" unique_id=322305095 groups=["bouncer"]]
-metadata/bounce_multiplier = 1.1
+metadata/bounce_multiplier = 1.08
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1875391019]
 shape = SubResource("CircleShape2D_1pwoe")

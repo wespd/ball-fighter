@@ -22,45 +22,25 @@ distance = -180.0
 
 [node name="Main" type="Node2D" unique_id=1593915679 node_paths=PackedStringArray("balls")]
 script = ExtResource("1_h2yge")
-balls = [NodePath("Ball"), NodePath("Ball2"), NodePath("Ball3"), NodePath("Ball4"), NodePath("Ball5"), NodePath("Ball6"), NodePath("Ball7"), NodePath("Ball8"), NodePath("Ball9"), NodePath("Ball10")]
+balls = [NodePath("Ball"), NodePath("Ball2"), NodePath("Ball3"), NodePath("Ball4")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1631611814]
 
 [node name="Ball" parent="." unique_id=260139811 instance=ExtResource("1_0xm2m")]
 z_index = 5
-position = Vector2(69, -21)
+position = Vector2(150, 0)
 
-[node name="Ball3" parent="." unique_id=560484325 instance=ExtResource("1_0xm2m")]
+[node name="Ball2" parent="." unique_id=1797804029 instance=ExtResource("1_0xm2m")]
 z_index = 5
-position = Vector2(-25, 85)
+position = Vector2(-150, 0)
 
-[node name="Ball4" parent="." unique_id=1971782723 instance=ExtResource("1_0xm2m")]
+[node name="Ball3" parent="." unique_id=874225738 instance=ExtResource("1_0xm2m")]
 z_index = 5
-position = Vector2(60, 97)
+position = Vector2(0, 150)
 
-[node name="Ball5" parent="." unique_id=996144897 instance=ExtResource("1_0xm2m")]
+[node name="Ball4" parent="." unique_id=173029196 instance=ExtResource("1_0xm2m")]
 z_index = 5
-position = Vector2(-48, -74)
-
-[node name="Ball6" parent="." unique_id=1473763551 instance=ExtResource("1_0xm2m")]
-z_index = 5
-position = Vector2(78, -89)
-
-[node name="Ball7" parent="." unique_id=2011055482 instance=ExtResource("1_0xm2m")]
-z_index = 5
-position = Vector2(-61, -134)
-
-[node name="Ball8" parent="." unique_id=914833392 instance=ExtResource("1_0xm2m")]
-z_index = 5
-position = Vector2(-123, 63)
-
-[node name="Ball9" parent="." unique_id=982862354 instance=ExtResource("1_0xm2m")]
-z_index = 5
-position = Vector2(-38, 47)
-
-[node name="Ball10" parent="." unique_id=980739661 instance=ExtResource("1_0xm2m")]
-z_index = 5
-position = Vector2(18, -121)
+position = Vector2(0, -150)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=188603996]
 layer = -10
@@ -118,26 +98,26 @@ metadata/bounce_multiplier = 1.01
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LowerEdge" unique_id=1213868640]
 shape = SubResource("WorldBoundaryShape2D_7dm0k")
 
-[node name="Ball2" parent="." unique_id=1279368000 instance=ExtResource("1_0xm2m")]
-position = Vector2(-101, -40)
-
 [node name="VoidPeg" parent="." unique_id=1481263294 instance=ExtResource("3_8gbba")]
-position = Vector2(-131, -72)
+position = Vector2(-130, -130)
 
 [node name="VoidPeg2" parent="." unique_id=1509861467 instance=ExtResource("3_8gbba")]
-position = Vector2(110, -54)
+position = Vector2(130, -130)
 
 [node name="VoidPeg3" parent="." unique_id=36815349 instance=ExtResource("3_8gbba")]
-position = Vector2(-136, 92)
+position = Vector2(-130, 130)
 
 [node name="VoidPeg4" parent="." unique_id=848812103 instance=ExtResource("3_8gbba")]
-position = Vector2(140, 61)
+position = Vector2(130, 130)
 
 [node name="Peg" parent="." unique_id=322305095 instance=ExtResource("3_h2yge")]
-position = Vector2(-82, 6)
+position = Vector2(-110, 0)
 
 [node name="Peg2" parent="." unique_id=162801599 instance=ExtResource("3_h2yge")]
-position = Vector2(59, -66)
+position = Vector2(110, 0)
 
 [node name="Peg3" parent="." unique_id=1529483174 instance=ExtResource("3_h2yge")]
-position = Vector2(56, 70)
+position = Vector2(0, 110)
+
+[node name="Peg4" parent="." unique_id=978199457 instance=ExtResource("3_h2yge")]
+position = Vector2(0, -110)
