@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd8wa6sq4808p"
-path="res://.godot/imported/basic_ball.png-5664626d73241a79949455c6b54f5e0d.ctex"
+uid="uid://dhf76eda4dvro"
+path="res://.godot/imported/Ball_death_animation.png-89156da150b8814e4c267d6d05cb224d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/basic_ball.png"
-dest_files=["res://.godot/imported/basic_ball.png-5664626d73241a79949455c6b54f5e0d.ctex"]
+source_file="res://Sprites/Ball_death_animation.png"
+dest_files=["res://.godot/imported/Ball_death_animation.png-89156da150b8814e4c267d6d05cb224d.ctex"]
 
 [params]
 

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cji2nyfbdyjvq"]
+
+[ext_resource type="Script" uid="uid://cherdjum4w7a0" path="res://Scripts/money_up.gd" id="1_3wvx6"]
+
+[node name="MoneyUp" type="RichTextLabel" unique_id=633009799]
+process_mode = 3
+z_index = 2
+offset_right = 40.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "[color=green]5$"
+script = ExtResource("1_3wvx6")

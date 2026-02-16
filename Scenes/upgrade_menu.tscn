@@ -15,6 +15,22 @@ upgrade_text = "Increase Max Speed"
 cost = 0.0
 metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
 
+[sub_resource type="Resource" id="Resource_2hr16"]
+script = ExtResource("6_2hr16")
+amounts = [1000.0]
+variables_to_modify = Array[String](["max_speed"])
+upgrade_text = "Increase Max Speed"
+cost = 0.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_mpwqm"]
+script = ExtResource("6_2hr16")
+amounts = [100000.0]
+variables_to_modify = Array[String](["max_health"])
+upgrade_text = "Increase Max Health"
+cost = 0.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
 [node name="UpgradeMenu" type="CanvasLayer" unique_id=1644143263 node_paths=PackedStringArray("upgrades")]
 process_mode = 3
 layer = 100
@@ -96,7 +112,7 @@ offset_right = 514.0
 offset_bottom = 411.0
 texture_normal = ExtResource("2_11363")
 script = ExtResource("4_f5dmy")
-upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_lpopj"), SubResource("Resource_lpopj")])
+upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_2hr16"), SubResource("Resource_mpwqm")])
 metadata/_custom_type_script = "uid://cdmy4aqgthshu"
 
 [node name="UpgradeButton3" type="TextureButton" parent="." unique_id=1966536519]

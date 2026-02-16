@@ -1,8 +1,19 @@
 extends Ball
 
 signal player_death
+const PLAYER_DEATH = preload("uid://cl58wttmev3sr")
+
 
 func on_death():
+	get_tree().paused = true
+	is_stunned = true
+	sprite_2d.visible = false
+	var death_anim := PLAYER_DEATH.instantiate()
+	get_tree().current_scene.add_child(death_anim)
+	death_anim.position = position
+	await death_anim.animation_finished
+	is_stunned = false
+	sprite_2d.visible = true
 	player_death.emit()
 	print("Player died")
 
@@ -25,4 +36,7 @@ func take_damage_enemy(damage : float):
 	pass
 	
 func take_damage_player(damage : float):
-	super.take_damage_enemy(damage)
+	print("%s took %s damage" %[name,damage])
+	current_health -= damage
+	if current_health <= 0:
+		on_death()

@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://brquq467iyivh"]
 
 [ext_resource type="Script" uid="uid://c68fqg3mb316e" path="res://Scripts/player_ball.gd" id="1_m38xh"]
-[ext_resource type="Texture2D" uid="uid://bvnrdo1rpfgib" path="res://Sprites/ball.png" id="2_m38xh"]
+[ext_resource type="Texture2D" uid="uid://dhf76eda4dvro" path="res://Sprites/Ball_death_animation.png" id="2_m38xh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fsq41"]
 radius = 16.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_k40wh"]
+atlas = ExtResource("2_m38xh")
+region = Rect2(0, 0, 32, 32)
+
 [node name="PlayerBall" type="CharacterBody2D" unique_id=911088835]
+z_index = 1
 script = ExtResource("1_m38xh")
 speed = 600.0
 max_speed = 2000.0
@@ -17,4 +22,4 @@ metadata/_custom_type_script = "uid://dixxpmc8rr44b"
 shape = SubResource("CircleShape2D_fsq41")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1900339853]
-texture = ExtResource("2_m38xh")
+texture = SubResource("AtlasTexture_k40wh")
