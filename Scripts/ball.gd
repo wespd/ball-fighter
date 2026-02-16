@@ -6,6 +6,7 @@ class_name Ball
 @export var max_health : float = 4000
 var current_health : float
 var direction : Vector2 = Vector2(1,3)
+signal died
 
 func _ready():
 	current_health = max_health
@@ -38,6 +39,7 @@ func take_damage_enemy(damage : float):
 		on_death()
 		
 func on_death():
+	died.emit()
 	queue_free()
 		
 	

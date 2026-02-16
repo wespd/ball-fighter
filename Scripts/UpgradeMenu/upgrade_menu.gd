@@ -3,12 +3,15 @@ extends CanvasLayer
 @export var upgrades : Array[UpgradeButton]
 @onready var item_description_background = $ItemDescriptionBackground
 @onready var item_description = $ItemDescriptionBackground/ItemDescription
+@onready var next_level = $NextLevel
 
 func _ready():
 	for upgrade in upgrades:
 		upgrade.mouse_entered.connect(_on_upgrade_button_hovered.bind(upgrade))
 		upgrade.mouse_exited.connect(_on_upgrade_button_unhovered)
 		upgrade.pressed.connect(_attempt_buy_upgrade.bind(upgrade))
+	next_level.pressed.connect(_next_level_button_pressed)
+	
 	
 func _on_upgrade_button_hovered(button : UpgradeButton):
 	if button.disabled:
@@ -28,3 +31,8 @@ func _attempt_buy_upgrade(button : UpgradeButton):
 			item_description_background.hide()
 	else:
 		print("can't buy!")
+		
+func _next_level_button_pressed():
+	print("hiding")
+	hide()
+	LevelManager.spawn_level()

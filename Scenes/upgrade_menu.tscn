@@ -16,7 +16,9 @@ cost = 0.0
 metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
 
 [node name="UpgradeMenu" type="CanvasLayer" unique_id=1644143263 node_paths=PackedStringArray("upgrades")]
+process_mode = 3
 layer = 100
+visible = false
 script = ExtResource("1_6gn5s")
 upgrades = [NodePath("UpgradeButton"), NodePath("UpgradeButton2"), NodePath("UpgradeButton3")]
 
@@ -44,6 +46,7 @@ text = "[color=green]52$[/color]"
 script = ExtResource("1_ltp0x")
 
 [node name="ItemDescriptionBackground" type="ColorRect" parent="." unique_id=1163079785]
+process_mode = 3
 visible = false
 z_index = 2
 custom_minimum_size = Vector2(256, 64)
@@ -106,3 +109,17 @@ texture_normal = ExtResource("2_11363")
 script = ExtResource("4_f5dmy")
 upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_lpopj"), SubResource("Resource_lpopj")])
 metadata/_custom_type_script = "uid://cdmy4aqgthshu"
+
+[node name="NextLevel" type="Button" parent="." unique_id=217088264]
+process_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -42.5
+offset_top = -31.0
+offset_right = 42.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Next level"

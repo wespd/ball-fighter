@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ball_fighter"
-run/main_scene="uid://c7jshwyf5wvip"
+run/main_scene="uid://bt1apyetmb8t4"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Sprites/icon.svg"
 
@@ -19,6 +19,8 @@ config/icon="res://Sprites/icon.svg"
 
 PlayerBall="*uid://brquq467iyivh"
 UpgradeGlobals="*uid://cdunodusbtyc"
+LevelManager="*uid://bopn51gblcnj2"
+UpgradeMenu="*uid://yqk223t1aug7"
 
 [display]
 
