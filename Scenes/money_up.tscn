@@ -5,8 +5,9 @@
 [node name="MoneyUp" type="RichTextLabel" unique_id=633009799]
 process_mode = 3
 z_index = 2
-offset_right = 40.0
+custom_minimum_size = Vector2(256, 5)
+offset_right = 256.0
 offset_bottom = 40.0
 bbcode_enabled = true
-text = "[color=green]5$"
+text = "[color=green][shake rate=10.0 level=4 connected=1]+5$"
 script = ExtResource("1_3wvx6")

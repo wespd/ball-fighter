@@ -1,8 +1,7 @@
 extends CanvasLayer
 
 @export var upgrades : Array[UpgradeButton]
-@onready var item_description_background = $ItemDescriptionBackground
-@onready var item_description = $ItemDescriptionBackground/ItemDescription
+@onready var item_description = $ItemDescription
 @onready var next_level = $NextLevel
 
 func _ready():
@@ -16,20 +15,20 @@ func _ready():
 	
 func _on_upgrade_button_hovered(button : UpgradeButton):
 	if button.disabled:
+		item_description.hide()
 		return
-	item_description_background.show()
+	item_description.show()
 	item_description.text = "%s [br] [color=green]%s$[/color]"%[button.current_upgrade.upgrade_text, button.current_upgrade.cost]
 	
 func _on_upgrade_button_unhovered():
-	item_description_background.hide()
+	item_description.hide()
 	
 func _attempt_buy_upgrade(button : UpgradeButton):
 	if button.can_buy_upgrade():
 		button.buy_upgarde()
 		print("Bought upgrade")
 		print(PlayerBall.max_speed)
-		if button.disabled:
-			item_description_background.hide()
+		_on_upgrade_button_hovered(button)
 	else:
 		print("can't buy!")
 		

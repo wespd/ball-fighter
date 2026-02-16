@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name Ball
 
+const DIMENSIONS : Vector2 = Vector2(360,360)
+
 @export var speed : float = 300
 @export var max_speed : float = 1000
 @export var max_health : float = 4000
@@ -12,7 +14,6 @@ var current_health : float
 var direction : Vector2 = Vector2(1,3)
 signal died
 const ENEMY_DEATH = preload("uid://c51bs6ef7pdb6")
-const MONEY_UP = preload("uid://cji2nyfbdyjvq")
 
 func _ready():
 	current_health = max_health
@@ -28,7 +29,7 @@ func _process(delta):
 	
 	if collision_info:
 		on_collision(collision_info)
-			
+	_warp_ball()
 			
 func bounce_off_surface(normal : Vector2):
 	direction = direction.bounce(normal).normalized()
@@ -46,9 +47,11 @@ func on_collision(collision_info : KinematicCollision2D):
 		for child in collider.get_children(true):
 			if child is AnimatedSprite2D:
 				child.play("default")
+			
 	if speed > max_speed:
 		speed = max_speed
 			
+
 func take_damage(damage : float):
 	print("%s took %s damage" %[name,damage])
 	current_health -= damage
@@ -61,11 +64,18 @@ func on_death():
 	var death_anim = ENEMY_DEATH.instantiate()
 	get_tree().current_scene.add_child(death_anim)
 	death_anim.position = position
-	var money_up = MONEY_UP.instantiate()
-	money_up.amount = 5.0
-	money_up.position = position
-	get_tree().current_scene.add_child(money_up)
+	UpgradeGlobals.get_money(5.0, position)
 	queue_free()
+	
+func _warp_ball():
+	if position.x < -DIMENSIONS.x/2:
+		position.x = DIMENSIONS.x/2
+	if position.x > DIMENSIONS.x/2:
+		position.x = -DIMENSIONS.x/2
+	if position.y < -DIMENSIONS.y/2:
+		position.y = DIMENSIONS.y/2
+	if position.y > DIMENSIONS.y/2:
+		position.y = -DIMENSIONS.y/2
 	
 		
 	

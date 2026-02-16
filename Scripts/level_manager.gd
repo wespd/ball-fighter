@@ -3,13 +3,15 @@ extends Node
 var current_level : int = 0
 
 var levels : Array[String] = [
-	"res://Scenes/main.tscn"
+	"res://Scenes/Levels/first_level.tscn",
+	"res://Scenes/Levels/second_level.tscn"
 ]
 
 func spawn_level():
 	PlayerBall.global_position = Vector2.ZERO
 	PlayerBall.current_health = PlayerBall.max_health
 	PlayerBall.direction = Vector2.from_angle(randf_range(0,2 * PI))
+	PlayerBall.speed = PlayerBall.starting_speed
 	PlayerBall.is_stunned = false
 	print(get_tree().current_scene.scene_file_path)
 	if get_tree().current_scene.scene_file_path == levels[current_level]:

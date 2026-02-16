@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dxukabtqjyao0"]
+
+[ext_resource type="Script" uid="uid://lofdtjy7bktx" path="res://Scripts/shcokwave.gd" id="1_6rqsx"]
+[ext_resource type="Shader" uid="uid://d4g33yo3jkg6p" path="res://Shaders/shockwave.gdshader" id="2_jm8ac"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3iu1a"]
+shader = ExtResource("2_jm8ac")
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/force = 0.085
+shader_parameter/size = 0.505
+shader_parameter/thickness = 0.19
+
+[node name="Shcokwave" type="CanvasLayer" unique_id=659506385]
+layer = 100
+script = ExtResource("1_6rqsx")
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="." unique_id=1583825555]
+copy_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=442515484]
+material = SubResource("ShaderMaterial_3iu1a")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

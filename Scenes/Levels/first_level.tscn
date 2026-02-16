@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://cp23roms2sjx2"]
+
+[ext_resource type="Script" uid="uid://dwsrph4ywts4u" path="res://Scripts/level.gd" id="1_i5tww"]
+[ext_resource type="Texture2D" uid="uid://bdpa11ayav36h" path="res://Sprites/test-bg.png" id="1_pop6l"]
+[ext_resource type="PackedScene" uid="uid://d18bcpnidh32y" path="res://Scenes/ball.tscn" id="3_aqoxu"]
+[ext_resource type="PackedScene" uid="uid://y4gf131udgjo" path="res://Scenes/peg.tscn" id="4_4l5vx"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i5tww"]
+normal = Vector2(1, 0)
+distance = -180.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_aqoxu"]
+normal = Vector2(-1, 0)
+distance = -180.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4l5vx"]
+normal = Vector2(0, 1)
+distance = -180.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_swywn"]
+distance = -180.0
+
+[node name="FirstLevel" type="Node2D" unique_id=2094502786]
+script = ExtResource("1_i5tww")
+metadata/_custom_type_script = "uid://dwsrph4ywts4u"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1044042143]
+
+[node name="LeftEdge" type="StaticBody2D" parent="." unique_id=873494206]
+position = Vector2(4, 1)
+collision_layer = 2
+collision_mask = 2
+metadata/bounce_multiplier = 1.01
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftEdge" unique_id=546098]
+shape = SubResource("WorldBoundaryShape2D_i5tww")
+
+[node name="RightEdge" type="StaticBody2D" parent="." unique_id=1826834626]
+position = Vector2(4, 1)
+collision_layer = 2
+collision_mask = 2
+metadata/bounce_multiplier = 1.01
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightEdge" unique_id=200194276]
+shape = SubResource("WorldBoundaryShape2D_aqoxu")
+
+[node name="UpperEdge" type="StaticBody2D" parent="." unique_id=644621274]
+position = Vector2(4, 1)
+collision_layer = 2
+collision_mask = 2
+metadata/bounce_multiplier = 1.01
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperEdge" unique_id=1586157198]
+shape = SubResource("WorldBoundaryShape2D_4l5vx")
+
+[node name="LowerEdge" type="StaticBody2D" parent="." unique_id=1956993251]
+position = Vector2(4, 1)
+collision_layer = 2
+collision_mask = 2
+metadata/bounce_multiplier = 1.01
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerEdge" unique_id=518018355]
+shape = SubResource("WorldBoundaryShape2D_swywn")
+
+[node name="Background" type="TextureRect" parent="." unique_id=498260788]
+z_index = 6
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pop6l")
+
+[node name="Boundry" type="ColorRect" parent="." unique_id=2031653392]
+z_index = -10
+custom_minimum_size = Vector2(360, 360)
+anchors_preset = -1
+anchor_left = 0.35900003
+anchor_top = 0.25
+anchor_right = 0.64100003
+anchor_bottom = 0.75000006
+offset_left = -180.0
+offset_top = -180.0
+offset_right = 180.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.41598046, 0.41598043, 0.4159804, 1)
+
+[node name="BallEnemy" parent="." unique_id=1797804029 instance=ExtResource("3_aqoxu")]
+position = Vector2(3, -135)
+speed = 100.0
+max_speed = 300.0
+max_health = 200.0
+damage_multiplier = 0.2
+
+[node name="Peg" parent="." unique_id=322305095 instance=ExtResource("4_4l5vx")]
+position = Vector2(-110, 0)
+
+[node name="Peg2" parent="." unique_id=1174248728 instance=ExtResource("4_4l5vx")]
+position = Vector2(110, 0)
+
+[node name="Peg3" parent="." unique_id=1397873201 instance=ExtResource("4_4l5vx")]
+position = Vector2(0, 110)
+
+[node name="Peg4" parent="." unique_id=1543104727 instance=ExtResource("4_4l5vx")]
+position = Vector2(0, -110)
