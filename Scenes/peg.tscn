@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://y4gf131udgjo"]
 
 [ext_resource type="Texture2D" uid="uid://cnhd6r6l232e0" path="res://Sprites/Pegs.png" id="1_y34qd"]
+[ext_resource type="Shader" uid="uid://d4g33yo3jkg6p" path="res://Shaders/shockwave.gdshader" id="2_p4b2k"]
+[ext_resource type="Script" uid="uid://dktyk4ajef784" path="res://Scripts/shockwave.gd" id="3_e1ejv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1pwoe"]
 radius = 4.0
@@ -62,6 +64,13 @@ animations = [{
 "speed": 40.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e1ejv"]
+shader = ExtResource("2_p4b2k")
+shader_parameter/force = 0.0
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/mask_radius = 0.31
+shader_parameter/edge_size_multiplier = 1.0
+
 [node name="Peg" type="StaticBody2D" unique_id=322305095 groups=["bouncer"]]
 metadata/bounce_multiplier = 1.08
 
@@ -72,3 +81,18 @@ shape = SubResource("CircleShape2D_1pwoe")
 sprite_frames = SubResource("SpriteFrames_1rs7m")
 frame = 6
 frame_progress = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2028918199]
+material = SubResource("ShaderMaterial_e1ejv")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_e1ejv")

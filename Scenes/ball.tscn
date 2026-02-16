@@ -13,7 +13,7 @@ radius = 16.0
 
 [node name="BallEnemy" type="CharacterBody2D" unique_id=1797804029]
 script = ExtResource("1_41u45")
-max_health = 800.0
+max_health = 350.0
 damage_multiplier = 0.7
 metadata/_custom_type_script = "uid://dixxpmc8rr44b"
 

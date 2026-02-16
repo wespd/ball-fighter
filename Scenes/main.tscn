@@ -22,7 +22,7 @@ distance = -180.0
 
 [node name="Main" type="Node2D" unique_id=1593915679 node_paths=PackedStringArray("balls")]
 script = ExtResource("1_h2yge")
-balls = [NodePath("Ball"), NodePath("Ball2"), NodePath("Ball3"), NodePath("Ball4")]
+balls = [NodePath("Ball"), NodePath("Ball2"), NodePath("Ball3"), NodePath("Ball4"), NodePath("Ball5"), NodePath("Ball6"), NodePath("Ball7"), NodePath("Ball8")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1631611814]
 
@@ -41,6 +41,22 @@ position = Vector2(0, 150)
 [node name="Ball4" parent="." unique_id=173029196 instance=ExtResource("1_0xm2m")]
 z_index = 5
 position = Vector2(0, -150)
+
+[node name="Ball5" parent="." unique_id=974633676 instance=ExtResource("1_0xm2m")]
+z_index = 5
+position = Vector2(150, 150)
+
+[node name="Ball6" parent="." unique_id=1037508977 instance=ExtResource("1_0xm2m")]
+z_index = 5
+position = Vector2(-150, 150)
+
+[node name="Ball7" parent="." unique_id=1915835903 instance=ExtResource("1_0xm2m")]
+z_index = 5
+position = Vector2(-150, -150)
+
+[node name="Ball8" parent="." unique_id=1999696593 instance=ExtResource("1_0xm2m")]
+z_index = 5
+position = Vector2(150, -150)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=188603996]
 layer = -10

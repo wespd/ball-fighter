@@ -16,7 +16,7 @@ z_index = 1
 script = ExtResource("1_m38xh")
 speed = 350.0
 max_speed = 500.0
-max_health = 1000.0
+max_health = 300.0
 metadata/_custom_type_script = "uid://dixxpmc8rr44b"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=316485454]

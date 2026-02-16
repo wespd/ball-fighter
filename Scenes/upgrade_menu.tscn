@@ -9,10 +9,10 @@
 
 [sub_resource type="Resource" id="Resource_lpopj"]
 script = ExtResource("6_2hr16")
-amounts = [1000.0]
-variables_to_modify = Array[String](["max_speed"])
-upgrade_text = "Increase Max Speed"
-cost = 0.0
+amounts = [300.0]
+variables_to_modify = Array[String](["max_health"])
+upgrade_text = "Increase Max [color=green]Health"
+cost = 5.0
 metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
 
 [sub_resource type="Resource" id="Resource_2hr16"]

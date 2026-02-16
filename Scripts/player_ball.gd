@@ -31,6 +31,8 @@ func on_collision(collision_info : KinematicCollision2D):
 		for child in collider.get_children(true):
 			if child is AnimatedSprite2D:
 				child.play("default")
+			if child is ColorRect:
+				child.emit_shockwave()
 	if speed > max_speed:
 		speed = max_speed
 		
