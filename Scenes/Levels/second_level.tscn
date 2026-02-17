@@ -21,9 +21,8 @@ distance = -180.0
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7dm0k"]
 distance = -180.0
 
-[node name="Main" type="Node2D" unique_id=1593915679 node_paths=PackedStringArray("balls")]
+[node name="Main" type="Node2D" unique_id=1593915679]
 script = ExtResource("1_ob8nl")
-balls = [NodePath("Ball"), NodePath("Ball2"), NodePath("Ball3"), NodePath("Ball4"), NodePath("Ball5"), NodePath("Ball6"), NodePath("Ball7"), NodePath("Ball8")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1631611814]
 

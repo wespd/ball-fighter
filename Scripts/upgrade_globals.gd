@@ -12,3 +12,10 @@ func get_money(amount : float, location : Vector2):
 	money_sprite.amount = amount
 	money_sprite.position = location
 	get_tree().current_scene.add_child(money_sprite)
+
+func _ready():
+	LevelManager.level_starting.connect(reset_trackers)
+	
+func reset_trackers():
+	money_this_round = 0
+	kills_this_round = 0

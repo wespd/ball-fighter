@@ -17,7 +17,8 @@ collision_mask = 5
 script = ExtResource("1_41u45")
 speed = 100.0
 max_speed = 300.0
-max_health = 200.0
+max_health = 50.0
+damage_multiplier = 0.2
 metadata/_custom_type_script = "uid://dixxpmc8rr44b"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1006215520]

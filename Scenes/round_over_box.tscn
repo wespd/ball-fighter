@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://dxjx8f2un6x6u" path="res://Scripts/round_over_box.gd" id="1_wmeji"]
 
-[node name="RoundOverBox" type="ColorRect" unique_id=1166245015]
-clip_contents = true
-custom_minimum_size = Vector2(360, 360)
+[node name="RoundOverBox" type="CanvasLayer" unique_id=1940377697]
+process_mode = 3
+visible = false
+script = ExtResource("1_wmeji")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1292402464]
+custom_minimum_size = Vector2(362, 362)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -17,18 +21,17 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
-script = ExtResource("1_wmeji")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1241752678]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1241752678]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 56
+theme_override_constants/separation = 49
 
-[node name="MoneyLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=797254427]
+[node name="MoneyLabel" type="RichTextLabel" parent="ColorRect/VBoxContainer" unique_id=797254427]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 bbcode_enabled = true
@@ -36,7 +39,7 @@ text = "Money Earned [br] 10$"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="KillsLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=1937731254]
+[node name="KillsLabel" type="RichTextLabel" parent="ColorRect/VBoxContainer" unique_id=1937731254]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 bbcode_enabled = true
@@ -44,7 +47,7 @@ text = "Enemies Killed [br] 10"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RoundStatusLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=1720987281]
+[node name="RoundStatusLabel" type="RichTextLabel" parent="ColorRect/VBoxContainer" unique_id=1720987281]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 bbcode_enabled = true
@@ -52,6 +55,8 @@ text = "Round (won or lost)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ContinueButton" type="Button" parent="VBoxContainer" unique_id=1757031771]
+[node name="ContinueButton" type="Button" parent="ColorRect/VBoxContainer" unique_id=1757031771]
+process_mode = 3
+custom_minimum_size = Vector2(360, 50)
 layout_mode = 2
 text = "Continue"

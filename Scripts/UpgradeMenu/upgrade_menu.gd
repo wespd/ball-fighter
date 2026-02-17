@@ -1,15 +1,15 @@
 extends CanvasLayer
 
-@export var upgrades : Array[UpgradeButton]
 @onready var item_description = $ItemDescription
 @onready var next_level = $NextLevel
 
 func _ready():
 	hide()
-	for upgrade in upgrades:
-		upgrade.mouse_entered.connect(_on_upgrade_button_hovered.bind(upgrade))
-		upgrade.mouse_exited.connect(_on_upgrade_button_unhovered)
-		upgrade.pressed.connect(_attempt_buy_upgrade.bind(upgrade))
+	for upgrade in get_children():
+		if upgrade is UpgradeButton:
+			upgrade.mouse_entered.connect(_on_upgrade_button_hovered.bind(upgrade))
+			upgrade.mouse_exited.connect(_on_upgrade_button_unhovered)
+			upgrade.pressed.connect(_attempt_buy_upgrade.bind(upgrade))
 	next_level.pressed.connect(_next_level_button_pressed)
 	
 	
@@ -35,4 +35,5 @@ func _attempt_buy_upgrade(button : UpgradeButton):
 func _next_level_button_pressed():
 	print("hiding")
 	hide()
+	get_tree().paused = false
 	LevelManager.spawn_level()

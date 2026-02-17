@@ -22,6 +22,7 @@ UpgradeGlobals="*uid://cdunodusbtyc"
 LevelManager="*uid://bopn51gblcnj2"
 UpgradeMenu="*uid://yqk223t1aug7"
 CollisionManager="*uid://i7koeqri31sp"
+RoundOverBox="*uid://boiv6gr1qpttj"
 
 [display]
 

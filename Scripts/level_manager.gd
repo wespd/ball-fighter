@@ -7,7 +7,13 @@ var levels : Array[String] = [
 	"res://Scenes/Levels/second_level.tscn"
 ]
 
+signal level_starting
+
+func _ready():
+	PlayerBall.player_death.connect(on_player_loss)
+
 func spawn_level():
+	level_starting.emit()
 	PlayerBall.global_position = Vector2.ZERO
 	PlayerBall.current_health = PlayerBall.max_health
 	PlayerBall.direction = Vector2.from_angle(randf_range(0,2 * PI))
@@ -25,7 +31,19 @@ func spawn_level():
 	get_tree().paused = false
 	PlayerBall.current_health = PlayerBall.max_health
 	
-func on_player_won():
-	get_tree().paused = true
-	print("PLAYER HATH WON")
 	
+func next_level():
+	current_level += 1
+	if current_level >= levels.size():
+		get_tree().paused = true
+		print("PLAYER BEAT GAME")
+
+func on_player_won():
+	RoundOverBox.appear(true)
+	next_level()
+	print("player won level")
+	
+
+func on_player_loss():
+	print("showing box!")
+	RoundOverBox.appear(false)

@@ -1,19 +1,18 @@
 extends Node2D
 class_name Level
 
-@export var balls: Array[Ball]
+var balls: Array[Ball]
 signal player_won
 
 func _ready():
-	PlayerBall.player_death.connect(_on_player_death)
-	for ball in balls:
-		ball.died.connect(on_ball_death.bind(ball))
-	
-func _on_player_death():
-	get_tree().paused = true
-	UpgradeMenu.show()
+	for child in get_children():
+		if child is Ball:
+			child.died.connect(on_ball_death.bind(child))
+			balls.append(child)
 	
 func on_ball_death(ball : Ball):
 	balls.erase(ball)
 	if balls.is_empty():
+		print("player won!")
+		get_tree().paused = true
 		player_won.emit()

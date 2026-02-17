@@ -12,7 +12,6 @@ func on_death():
 	get_tree().current_scene.add_child(death_anim)
 	death_anim.position = position
 	await death_anim.animation_finished
-	is_stunned = false
 	sprite_2d.visible = true
 	player_death.emit()
 	print("Player died")

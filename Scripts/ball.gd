@@ -53,13 +53,13 @@ func on_collision(collision_info : KinematicCollision2D):
 			
 
 func take_damage(damage : float):
-	print("%s took %s damage" %[name,damage])
 	current_health -= damage
 	if current_health <= 0:
 		on_death()
 		
 func on_death():
 	sprite_2d.visible = false
+	UpgradeGlobals.kills_this_round += 1
 	died.emit()
 	var death_anim = ENEMY_DEATH.instantiate()
 	get_tree().current_scene.add_child(death_anim)

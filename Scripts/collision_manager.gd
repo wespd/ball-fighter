@@ -4,7 +4,6 @@ var collisions : Dictionary[Ball,Ball] = {}
 
 	
 func try_collision(this : Ball, other : Ball):
-	print(collisions)
 	if collisions.has(this) and collisions.get(this) == other:
 		return
 	if not other.is_stunned:
