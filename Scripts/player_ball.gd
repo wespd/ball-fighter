@@ -5,6 +5,9 @@ const PLAYER_DEATH = preload("uid://cl58wttmev3sr")
 @export var starting_speed = 100.0
 var click_damage : float = 1.0
 
+@export var base_damage : float
+@export var speed_damage_multiplier : float = 0.0
+
 func on_death():
 	get_tree().paused = true
 	is_stunned = true

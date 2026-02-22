@@ -16,10 +16,10 @@ z_index = 1
 collision_layer = 7
 collision_mask = 7
 script = ExtResource("1_m38xh")
+base_damage = 10.0
 speed = 100.0
 max_speed = 300.0
 max_health = 200.0
-damage_multiplier = 0.1
 metadata/_custom_type_script = "uid://dixxpmc8rr44b"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=316485454]
