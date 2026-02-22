@@ -45,7 +45,7 @@ func _process(delta):
 	var motion = direction * speed * delta * (0 if is_stunned else 1)
 	var collision_info = move_and_collide(motion)
 	
-	if is_hovered_by_mouse and Input.is_action_just_pressed("left_click"):
+	if is_hovered_by_mouse and (Input.is_action_just_pressed("left_click") or PlayerBall.lazer > 1.0):
 		take_damage(PlayerBall.click_damage)
 		audio_stream_player.volume_db = 0
 		audio_stream_player.pitch_scale = randf_range(0.6,1.4)

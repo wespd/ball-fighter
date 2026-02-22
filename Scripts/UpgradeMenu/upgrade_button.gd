@@ -3,11 +3,14 @@ class_name UpgradeButton
 
 @export var upgrades : Array[BaseUpgrade]
 @export var linked_buttons : Array[UpgradeButton]
+@export var secret_upgrades : Array[UpgradeButton]
 var current_upgrade : BaseUpgrade
 var current_index : int = 0
 
 func _ready():
 	for button in linked_buttons:
+		button.hide()
+	for button in secret_upgrades:
 		button.hide()
 	if not upgrades.is_empty():
 		current_upgrade = upgrades[0]
@@ -32,6 +35,8 @@ func buy_upgarde():
 	else:
 		print("Upgrade ran out!")
 		disabled = true
+		for button in secret_upgrades:
+			button.show()
 	for button in linked_buttons:
 		button.show()
 	

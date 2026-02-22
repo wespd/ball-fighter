@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cdmy4aqgthshu" path="res://Scripts/UpgradeMenu/upgrade_button.gd" id="4_f5dmy"]
 [ext_resource type="Script" uid="uid://bkoa4ueuuudr3" path="res://Scripts/UpgradeSystem/base_upgrade.gd" id="6_2hr16"]
 [ext_resource type="Texture2D" uid="uid://0efiwquihtdg" path="res://Sprites/upgrade_spritesheet_completed.png" id="6_d1lbs"]
+[ext_resource type="Texture2D" uid="uid://csk8tm4nqx4kg" path="res://Sprites/play_button.png" id="7_m70ya"]
 [ext_resource type="Texture2D" uid="uid://bwngmxtvl01s2" path="res://Sprites/Background_static.png" id="8_mpwqm"]
 [ext_resource type="AudioStream" uid="uid://da548sc4eidav" path="res://sfx/Pixel River.ogg" id="9_v4egn"]
 [ext_resource type="AudioStream" uid="uid://o6knacpw3rt1" path="res://sfx/Upgrade.wav" id="10_d1lbs"]
@@ -107,6 +108,24 @@ modifiers = Dictionary[String, float]({
 })
 upgrade_text = "Increase [color=red]Damage[/color] on click"
 cost = 1000.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou68t"]
+atlas = ExtResource("3_d1lbs")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd5dw"]
+atlas = ExtResource("6_d1lbs")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="Resource" id="Resource_xxiwu"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"click_damage": -12.0,
+"lazer": 100.0
+})
+upgrade_text = "Hovering your cursor over a Ball autmotically [color=red] Damages [/color] it"
+cost = 5000.0
 metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vdgk6"]
@@ -374,6 +393,14 @@ upgrade_text = "Increase Ball [color=red] Damage"
 cost = 600.0
 metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojj7b"]
+atlas = ExtResource("7_m70ya")
+region = Rect2(0, 0, 128, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2q0m"]
+atlas = ExtResource("7_m70ya")
+region = Rect2(0, 33, 128, 31)
+
 [node name="UpgradeMenu" type="CanvasLayer" unique_id=1644143263]
 process_mode = 3
 layer = 100
@@ -394,7 +421,7 @@ bbcode_enabled = true
 text = "[color=green]52$[/color]"
 script = ExtResource("1_ltp0x")
 
-[node name="MouseDamageUpgrade" type="TextureButton" parent="." unique_id=994542970 node_paths=PackedStringArray("linked_buttons")]
+[node name="MouseDamageUpgrade" type="TextureButton" parent="." unique_id=994542970 node_paths=PackedStringArray("linked_buttons", "secret_upgrades")]
 anchors_preset = -1
 anchor_left = 0.47500002
 anchor_top = 0.45600003
@@ -409,6 +436,23 @@ texture_disabled = SubResource("AtlasTexture_d1lbs")
 script = ExtResource("4_f5dmy")
 upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_ttpbb"), SubResource("Resource_fm0cu"), SubResource("Resource_s2rwv"), SubResource("Resource_ojj7b"), SubResource("Resource_d2q0m"), SubResource("Resource_ou68t"), SubResource("Resource_ghmta"), SubResource("Resource_xveba"), SubResource("Resource_ox4vo"), SubResource("Resource_32p0l")])
 linked_buttons = [NodePath("../SpeedUpgrade"), NodePath("../HealthUpgrade")]
+secret_upgrades = [NodePath("../LAZER!!!!")]
+metadata/_custom_type_script = "uid://cdmy4aqgthshu"
+
+[node name="LAZER!!!!" type="TextureButton" parent="." unique_id=487180111]
+anchors_preset = -1
+anchor_left = 0.47500002
+anchor_top = 0.45600003
+anchor_right = 0.52500004
+anchor_bottom = 0.544
+offset_top = 127.67999
+offset_right = -48.00006
+offset_bottom = 80.31998
+scale = Vector2(4, 4)
+texture_normal = SubResource("AtlasTexture_ou68t")
+texture_disabled = SubResource("AtlasTexture_dd5dw")
+script = ExtResource("4_f5dmy")
+upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_xxiwu")])
 metadata/_custom_type_script = "uid://cdmy4aqgthshu"
 
 [node name="SpeedUpgrade" type="TextureButton" parent="." unique_id=24468706 node_paths=PackedStringArray("linked_buttons")]
@@ -485,7 +529,7 @@ script = ExtResource("4_f5dmy")
 upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_vdgk6"), SubResource("Resource_6c3n5"), SubResource("Resource_k2527"), SubResource("Resource_ucvn6"), SubResource("Resource_nuvth"), SubResource("Resource_ixie3")])
 metadata/_custom_type_script = "uid://cdmy4aqgthshu"
 
-[node name="NextLevel" type="Button" parent="." unique_id=217088264]
+[node name="NextLevel" type="TextureButton" parent="." unique_id=431031841]
 process_mode = 3
 anchors_preset = 7
 anchor_left = 0.5
@@ -497,7 +541,8 @@ offset_top = -31.0
 offset_right = 42.5
 grow_horizontal = 2
 grow_vertical = 0
-text = "Continue"
+texture_normal = SubResource("AtlasTexture_ojj7b")
+texture_hover = SubResource("AtlasTexture_d2q0m")
 
 [node name="ItemDescription" type="RichTextLabel" parent="." unique_id=1757485463]
 visible = false
