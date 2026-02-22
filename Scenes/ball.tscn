@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dixxpmc8rr44b" path="res://Scripts/ball.gd" id="1_41u45"]
 [ext_resource type="Texture2D" uid="uid://dhf76eda4dvro" path="res://Sprites/Ball_death_animation.png" id="2_ij5cq"]
-[ext_resource type="Script" uid="uid://chxtqsy5t4o55" path="res://Scripts/health_text.gd" id="3_376qj"]
+[ext_resource type="Script" path="res://Scripts/health_text.gd" id="3_376qj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_376qj"]
 atlas = ExtResource("2_ij5cq")
@@ -12,8 +12,8 @@ region = Rect2(0, 32, 32, 32)
 radius = 16.0
 
 [node name="BallEnemy" type="CharacterBody2D" unique_id=1797804029]
-collision_layer = 5
-collision_mask = 5
+collision_layer = 7
+collision_mask = 7
 input_pickable = true
 script = ExtResource("1_41u45")
 speed = 100.0
@@ -54,4 +54,3 @@ text = "test"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("3_376qj")
-metadata/_custom_type_script = "uid://chxtqsy5t4o55"
