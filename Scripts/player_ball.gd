@@ -7,6 +7,7 @@ var click_damage : float = 1.0
 
 @export var base_damage : float
 @export var speed_damage_multiplier : float = 0.0
+var lazer : float = 0.0
 
 func on_death():
 	get_tree().paused = true

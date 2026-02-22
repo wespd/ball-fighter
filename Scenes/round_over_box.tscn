@@ -2,7 +2,16 @@
 
 [ext_resource type="Script" uid="uid://dxjx8f2un6x6u" path="res://Scripts/round_over_box.gd" id="1_wmeji"]
 [ext_resource type="Texture2D" uid="uid://bwngmxtvl01s2" path="res://Sprites/Background_static.png" id="2_8lxrr"]
+[ext_resource type="Texture2D" uid="uid://csk8tm4nqx4kg" path="res://Sprites/play_button.png" id="2_iay4f"]
 [ext_resource type="AudioStream" uid="uid://c0x52pq83dcxr" path="res://sfx/Click.wav" id="3_ypr55"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgglp"]
+atlas = ExtResource("2_iay4f")
+region = Rect2(0, 0, 128, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2b27"]
+atlas = ExtResource("2_iay4f")
+region = Rect2(0, 34, 128, 30)
 
 [node name="RoundOverBox" type="CanvasLayer" unique_id=1940377697]
 process_mode = 3
@@ -57,11 +66,13 @@ text = "Round (won or lost)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ContinueButton" type="Button" parent="ColorRect/VBoxContainer" unique_id=1757031771]
+[node name="ContinueButton" type="TextureButton" parent="ColorRect/VBoxContainer" unique_id=1275203327]
 process_mode = 3
-custom_minimum_size = Vector2(360, 50)
 layout_mode = 2
-text = "Continue"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_tgglp")
+texture_hover = SubResource("AtlasTexture_x2b27")
 
 [node name="Background" type="TextureRect" parent="." unique_id=826385997]
 z_index = -1

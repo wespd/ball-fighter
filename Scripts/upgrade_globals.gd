@@ -2,7 +2,7 @@ extends Node
 
 const MONEY_UP = preload("uid://cji2nyfbdyjvq")
 
-var money : float = 0
+var money : float = 0.0
 
 var money_this_round = 0
 var kills_this_round = 0
