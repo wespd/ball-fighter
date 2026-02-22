@@ -74,6 +74,7 @@ offset_right = 640.0
 offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_vbq20")
 
 [node name="Boundry" type="ColorRect" parent="." unique_id=1714563956]
@@ -90,6 +91,7 @@ offset_right = 180.0
 offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.41598046, 0.41598043, 0.4159804, 1)
 
 [node name="VoidPeg" parent="." unique_id=1481263294 instance=ExtResource("3_pq6eg")]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b08alcy8fict6"]
+
+[ext_resource type="Script" uid="uid://yk88c6tewdjw" path="res://Scripts/black_hole.gd" id="1_qcnit"]
+[ext_resource type="Texture2D" uid="uid://dhf76eda4dvro" path="res://Sprites/Ball_death_animation.png" id="1_yqibl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcnit"]
+atlas = ExtResource("1_yqibl")
+region = Rect2(0, 64, 32, 32)
+
+[node name="BlackHole" type="Node2D" unique_id=34472540]
+script = ExtResource("1_qcnit")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1813939684]
+texture = SubResource("AtlasTexture_qcnit")

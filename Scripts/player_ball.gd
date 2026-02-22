@@ -3,6 +3,7 @@ extends Ball
 signal player_death
 const PLAYER_DEATH = preload("uid://cl58wttmev3sr")
 @export var starting_speed = 100.0
+var click_damage : float = 1.0
 
 func on_death():
 	get_tree().paused = true
@@ -37,3 +38,8 @@ func on_collision(collision_info : KinematicCollision2D):
 		speed = max_speed
 	UpgradeGlobals.get_money(money_to_add, position)
 		
+func take_damage(damage : float):
+	print("Player damage")
+	current_health -= damage
+	if current_health <= 0:
+		on_death()

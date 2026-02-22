@@ -66,6 +66,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_4l5vx")
 
 [node name="Boundry" type="ColorRect" parent="." unique_id=2031653392]
@@ -82,23 +83,20 @@ offset_right = 180.0
 offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.41598046, 0.41598043, 0.4159804, 1)
 
 [node name="BallEnemy" parent="." unique_id=1797804029 instance=ExtResource("3_aqoxu")]
 position = Vector2(0, -135)
-damage_multiplier = 0.2
 
 [node name="BallEnemy2" parent="." unique_id=544365159 instance=ExtResource("3_aqoxu")]
 position = Vector2(0, 135)
-damage_multiplier = 0.2
 
 [node name="BallEnemy3" parent="." unique_id=290746449 instance=ExtResource("3_aqoxu")]
 position = Vector2(-135, 0)
-damage_multiplier = 0.2
 
 [node name="BallEnemy4" parent="." unique_id=1339087098 instance=ExtResource("3_aqoxu")]
 position = Vector2(135, 0)
-damage_multiplier = 0.2
 
 [node name="Peg" parent="." unique_id=322305095 instance=ExtResource("4_4l5vx")]
 position = Vector2(-110, 0)

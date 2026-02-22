@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://yd7btfw7mn6e"]
+
+[ext_resource type="Texture2D" uid="uid://dhf76eda4dvro" path="res://Sprites/Ball_death_animation.png" id="1_qhw7v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk4cr"]
+atlas = ExtResource("1_qhw7v")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="Gradient" id="Gradient_376qj"]
+offsets = PackedFloat32Array(0.5652174, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="OnHitDamage" type="CPUParticles2D" unique_id=1604144354]
+z_index = -1
+emitting = false
+amount = 10
+texture = SubResource("AtlasTexture_yk4cr")
+lifetime = 0.4
+one_shot = true
+preprocess = 0.1
+explosiveness = 0.75
+local_coords = true
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
+angle_min = -180.0
+angle_max = 180.0
+scale_amount_min = 0.2
+scale_amount_max = 0.2
+color_ramp = SubResource("Gradient_376qj")
