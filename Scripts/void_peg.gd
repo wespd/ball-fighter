@@ -13,6 +13,7 @@ func _on_ball_entered(ball : Ball):
 	current_ball = ball
 	ball.is_stunned = true
 	var tweener := get_tree().create_tween()
+	tweener.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 	tweener.tween_property(ball, "position", position, 0.4)
 	timer.start(3.0)
 	

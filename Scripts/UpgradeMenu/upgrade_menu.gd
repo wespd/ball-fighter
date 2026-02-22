@@ -6,7 +6,6 @@ extends CanvasLayer
 const UPGRADE = preload("uid://o6knacpw3rt1")
 const CLICK = preload("uid://c0x52pq83dcxr")
 const CANT_PURCHASE = preload("uid://ckpsl88cegmyr")
-var tweener
 
 func _ready():
 	hide()
@@ -39,6 +38,7 @@ func _attempt_buy_upgrade(button : UpgradeButton):
 		_on_upgrade_button_hovered(button)
 	else:
 		var tweener := get_tree().create_tween()
+		tweener.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 		button.modulate = Color(1.0, 0.398, 0.329, 1.0)
 		tweener.tween_property(button, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.2)
 		print("can't buy!")

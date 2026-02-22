@@ -6,12 +6,17 @@
 [ext_resource type="Script" uid="uid://xss14x6kerwm" path="res://Scripts/UpgradeMenu/description.gd" id="3_lhh40"]
 [ext_resource type="Script" uid="uid://cdmy4aqgthshu" path="res://Scripts/UpgradeMenu/upgrade_button.gd" id="4_f5dmy"]
 [ext_resource type="Script" uid="uid://bkoa4ueuuudr3" path="res://Scripts/UpgradeSystem/base_upgrade.gd" id="6_2hr16"]
+[ext_resource type="Texture2D" uid="uid://0efiwquihtdg" path="res://Sprites/upgrade_spritesheet_completed.png" id="6_d1lbs"]
 [ext_resource type="Texture2D" uid="uid://bwngmxtvl01s2" path="res://Sprites/Background_static.png" id="8_mpwqm"]
 [ext_resource type="AudioStream" uid="uid://da548sc4eidav" path="res://sfx/Pixel River.ogg" id="9_v4egn"]
 [ext_resource type="AudioStream" uid="uid://o6knacpw3rt1" path="res://sfx/Upgrade.wav" id="10_d1lbs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m70ya"]
 atlas = ExtResource("3_d1lbs")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1lbs"]
+atlas = ExtResource("6_d1lbs")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="Resource" id="Resource_ttpbb"]
@@ -62,14 +67,54 @@ metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
 [sub_resource type="Resource" id="Resource_ou68t"]
 script = ExtResource("6_2hr16")
 modifiers = Dictionary[String, float]({
-"click_damage": 1.0
+"click_damage": 2.0
 })
 upgrade_text = "Increase [color=red]Damage[/color] on click"
 cost = 100.0
 metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
 
+[sub_resource type="Resource" id="Resource_ghmta"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"click_damage": 2.0
+})
+upgrade_text = "Increase [color=red]Damage[/color] on click"
+cost = 200.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_xveba"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"click_damage": 2.0
+})
+upgrade_text = "Increase [color=red]Damage[/color] on click"
+cost = 400.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_ox4vo"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"click_damage": 2.0
+})
+upgrade_text = "Increase [color=red]Damage[/color] on click"
+cost = 600.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_32p0l"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"click_damage": 3.0
+})
+upgrade_text = "Increase [color=red]Damage[/color] on click"
+cost = 1000.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_vdgk6"]
 atlas = ExtResource("3_d1lbs")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttpbb"]
+atlas = ExtResource("6_d1lbs")
 region = Rect2(16, 16, 16, 16)
 
 [sub_resource type="Resource" id="Resource_2hr16"]
@@ -152,8 +197,65 @@ upgrade_text = "Starting [color=blue]Speed[/color] and [color=blue]Max Speed[/co
 cost = 600.0
 metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4egn"]
+atlas = ExtResource("3_d1lbs")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60tjm"]
+atlas = ExtResource("6_d1lbs")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="Resource" id="Resource_cdma3"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"speed_damage_multiplier": 0.05
+})
+upgrade_text = "Increase [color=red] Damage [/color] by the Ball's [color=blue] Speed"
+cost = 100.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_3ldif"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"speed_damage_multiplier": 0.05
+})
+upgrade_text = "Increase [color=red] Damage [/color] by the Ball's [color=blue] Speed"
+cost = 500.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_rbkaj"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"speed_damage_multiplier": 0.05
+})
+upgrade_text = "Increase [color=red] Damage [/color] by the Ball's [color=blue] Speed"
+cost = 1000.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_uv1ro"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"speed_damage_multiplier": 0.05
+})
+upgrade_text = "Increase [color=red] Damage [/color] by the Ball's [color=blue] Speed"
+cost = 2000.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_yr6i7"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"speed_damage_multiplier": 0.05
+})
+upgrade_text = "Increase [color=red] Damage [/color] by the Ball's [color=blue] Speed"
+cost = 4000.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_6c3n5"]
 atlas = ExtResource("3_d1lbs")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fm0cu"]
+atlas = ExtResource("6_d1lbs")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="Resource" id="Resource_m70ya"]
@@ -212,6 +314,10 @@ metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpopj"]
 atlas = ExtResource("3_d1lbs")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2rwv"]
+atlas = ExtResource("6_d1lbs")
 region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="Resource" id="Resource_vdgk6"]
@@ -299,27 +405,49 @@ offset_right = -48.00006
 offset_bottom = -47.680023
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_m70ya")
+texture_disabled = SubResource("AtlasTexture_d1lbs")
 script = ExtResource("4_f5dmy")
-upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_ttpbb"), SubResource("Resource_fm0cu"), SubResource("Resource_s2rwv"), SubResource("Resource_ojj7b"), SubResource("Resource_d2q0m"), SubResource("Resource_ou68t")])
+upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_ttpbb"), SubResource("Resource_fm0cu"), SubResource("Resource_s2rwv"), SubResource("Resource_ojj7b"), SubResource("Resource_d2q0m"), SubResource("Resource_ou68t"), SubResource("Resource_ghmta"), SubResource("Resource_xveba"), SubResource("Resource_ox4vo"), SubResource("Resource_32p0l")])
 linked_buttons = [NodePath("../SpeedUpgrade"), NodePath("../HealthUpgrade")]
 metadata/_custom_type_script = "uid://cdmy4aqgthshu"
 
-[node name="SpeedUpgrade" type="TextureButton" parent="." unique_id=24468706]
+[node name="SpeedUpgrade" type="TextureButton" parent="." unique_id=24468706 node_paths=PackedStringArray("linked_buttons")]
 anchors_preset = -1
 anchor_left = 0.37500003
 anchor_top = 0.45600003
 anchor_right = 0.425
-anchor_bottom = 0.535
+anchor_bottom = 0.544
 offset_left = -3.0517578e-05
 offset_top = -0.32000732
 offset_right = -48.0
-offset_bottom = -41.200012
+offset_bottom = -47.680023
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_vdgk6")
+texture_disabled = SubResource("AtlasTexture_ttpbb")
 script = ExtResource("4_f5dmy")
 upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_2hr16"), SubResource("Resource_lpopj"), SubResource("Resource_mpwqm"), SubResource("Resource_v4egn"), SubResource("Resource_d1lbs"), SubResource("Resource_dd5dw"), SubResource("Resource_0hpf0"), SubResource("Resource_02rna")])
+linked_buttons = [NodePath("../SpeedDamageUpgrade")]
+metadata/_custom_type_script = "uid://cdmy4aqgthshu"
+
+[node name="SpeedDamageUpgrade" type="TextureButton" parent="." unique_id=116544101]
+anchors_preset = -1
+anchor_left = 0.37500003
+anchor_top = 0.633
+anchor_right = 0.425
+anchor_bottom = 0.72200006
+offset_left = -3.0517578e-05
+offset_top = 0.23999023
+offset_right = -48.0
+offset_bottom = -47.840027
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+texture_normal = SubResource("AtlasTexture_v4egn")
+texture_disabled = SubResource("AtlasTexture_60tjm")
+script = ExtResource("4_f5dmy")
+upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_cdma3"), SubResource("Resource_3ldif"), SubResource("Resource_rbkaj"), SubResource("Resource_uv1ro"), SubResource("Resource_yr6i7")])
 metadata/_custom_type_script = "uid://cdmy4aqgthshu"
 
 [node name="HealthUpgrade" type="TextureButton" parent="." unique_id=2095364106 node_paths=PackedStringArray("linked_buttons")]
@@ -334,6 +462,7 @@ offset_right = -48.0
 offset_bottom = -47.680023
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_6c3n5")
+texture_disabled = SubResource("AtlasTexture_fm0cu")
 script = ExtResource("4_f5dmy")
 upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_m70ya"), SubResource("Resource_60tjm"), SubResource("Resource_e7ua4"), SubResource("Resource_oerd0"), SubResource("Resource_eudnm"), SubResource("Resource_m7vyq"), SubResource("Resource_m7vyq")])
 linked_buttons = [NodePath("../DamageUpgrade")]
@@ -351,6 +480,7 @@ offset_right = -48.0
 offset_bottom = -47.840027
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_lpopj")
+texture_disabled = SubResource("AtlasTexture_s2rwv")
 script = ExtResource("4_f5dmy")
 upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_vdgk6"), SubResource("Resource_6c3n5"), SubResource("Resource_k2527"), SubResource("Resource_ucvn6"), SubResource("Resource_nuvth"), SubResource("Resource_ixie3")])
 metadata/_custom_type_script = "uid://cdmy4aqgthshu"
