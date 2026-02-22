@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dxjx8f2un6x6u" path="res://Scripts/round_over_box.gd" id="1_wmeji"]
 [ext_resource type="Texture2D" uid="uid://bwngmxtvl01s2" path="res://Sprites/Background_static.png" id="2_8lxrr"]
+[ext_resource type="AudioStream" uid="uid://c0x52pq83dcxr" path="res://sfx/Click.wav" id="3_ypr55"]
 
 [node name="RoundOverBox" type="CanvasLayer" unique_id=1940377697]
 process_mode = 3
@@ -72,3 +73,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("2_8lxrr")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1117081270]
+stream = ExtResource("3_ypr55")

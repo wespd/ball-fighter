@@ -1,17 +1,11 @@
 [gd_scene format=3 uid="uid://bt1apyetmb8t4"]
 
 [ext_resource type="Script" uid="uid://cermkwjth8tnn" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://bwngmxtvl01s2" path="res://Sprites/Background_static.png" id="2_1ehe0"]
+[ext_resource type="AudioStream" uid="uid://c0x52pq83dcxr" path="res://sfx/Click.wav" id="3_ce3w2"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=261460060]
 script = ExtResource("1_28flt")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=492817327]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=132902323]
 anchors_preset = -1
@@ -36,3 +30,17 @@ vertical_alignment = 1
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=1742522436]
 layout_mode = 2
 text = "Play"
+
+[node name="Background" type="TextureRect" parent="." unique_id=1271381345]
+z_index = -1
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_1ehe0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1374909065]
+stream = ExtResource("3_ce3w2")

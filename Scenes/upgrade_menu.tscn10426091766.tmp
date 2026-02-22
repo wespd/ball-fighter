@@ -1,0 +1,413 @@
+[gd_scene format=3 uid="uid://yqk223t1aug7"]
+
+[ext_resource type="Script" uid="uid://daktoivlyhp8t" path="res://Scripts/UpgradeMenu/upgrade_menu.gd" id="1_6gn5s"]
+[ext_resource type="Script" uid="uid://ulpe8err0svf" path="res://Scripts/UpgradeMenu/money_label.gd" id="1_ltp0x"]
+[ext_resource type="Script" uid="uid://xss14x6kerwm" path="res://Scripts/UpgradeMenu/description.gd" id="3_lhh40"]
+[ext_resource type="Texture2D" uid="uid://b5ig2bytn0slx" path="res://Sprites/cursor_upgrade.png" id="3_lpopj"]
+[ext_resource type="Script" uid="uid://cdmy4aqgthshu" path="res://Scripts/UpgradeMenu/upgrade_button.gd" id="4_f5dmy"]
+[ext_resource type="Script" uid="uid://bkoa4ueuuudr3" path="res://Scripts/UpgradeSystem/base_upgrade.gd" id="6_2hr16"]
+[ext_resource type="Texture2D" uid="uid://b67y1n516cvfa" path="res://Sprites/upgrade_icons.png" id="6_mpwqm"]
+[ext_resource type="Texture2D" uid="uid://bwngmxtvl01s2" path="res://Sprites/Background_static.png" id="8_mpwqm"]
+[ext_resource type="AudioStream" uid="uid://da548sc4eidav" path="res://sfx/Pixel River.ogg" id="9_v4egn"]
+[ext_resource type="AudioStream" uid="uid://o6knacpw3rt1" path="res://sfx/Upgrade.wav" id="10_d1lbs"]
+
+[sub_resource type="Resource" id="Resource_ttpbb"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"click_damage": 1.0
+})
+upgrade_text = "Increase [color=red]Damage[/color] on click"
+cost = 5.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_fm0cu"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"click_damage": 1.0
+})
+upgrade_text = "Increase [color=red]Damage[/color] on click"
+cost = 20.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_s2rwv"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"click_damage": 1.0
+})
+upgrade_text = "Increase [color=red]Damage[/color] on click"
+cost = 40.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_ojj7b"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"click_damage": 1.0
+})
+upgrade_text = "Increase [color=red]Damage[/color] on click"
+cost = 60.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_d2q0m"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"click_damage": 1.0
+})
+upgrade_text = "Increase [color=red]Damage[/color] on click"
+cost = 80.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_ou68t"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"click_damage": 1.0
+})
+upgrade_text = "Increase [color=red]Damage[/color] on click"
+cost = 100.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdgk6"]
+atlas = ExtResource("6_mpwqm")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="Resource" id="Resource_2hr16"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"max_speed": 100.0,
+"starting_speed": 100.0
+})
+upgrade_text = "Starting [color=blue]Speed[/color] and [color=blue]Max Speed[/color] up. Hint: [color=red] Damage [/color] scales with [color=blue] Speed"
+cost = 5.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_lpopj"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"max_speed": 100.0,
+"starting_speed": 100.0
+})
+upgrade_text = "Starting [color=blue]Speed[/color] and [color=blue]Max Speed[/color] up."
+cost = 35.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_mpwqm"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"max_speed": 100.0,
+"starting_speed": 100.0
+})
+upgrade_text = "Starting [color=blue]Speed[/color] and [color=blue]Max Speed[/color] up."
+cost = 65.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_v4egn"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"max_speed": 100.0,
+"starting_speed": 100.0
+})
+upgrade_text = "Starting [color=blue]Speed[/color] and [color=blue]Max Speed[/color] up."
+cost = 200.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_d1lbs"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"max_speed": 100.0,
+"starting_speed": 100.0
+})
+upgrade_text = "Starting [color=blue]Speed[/color] and [color=blue]Max Speed[/color] up."
+cost = 300.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_dd5dw"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"max_speed": 100.0,
+"starting_speed": 100.0
+})
+upgrade_text = "Starting [color=blue]Speed[/color] and [color=blue]Max Speed[/color] up."
+cost = 400.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_0hpf0"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"max_speed": 100.0,
+"starting_speed": 100.0
+})
+upgrade_text = "Starting [color=blue]Speed[/color] and [color=blue]Max Speed[/color] up."
+cost = 500.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_02rna"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"max_speed": 100.0,
+"starting_speed": 100.0
+})
+upgrade_text = "Starting [color=blue]Speed[/color] and [color=blue]Max Speed[/color] up."
+cost = 600.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6c3n5"]
+atlas = ExtResource("6_mpwqm")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="Resource" id="Resource_m70ya"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"max_health": 100.0
+})
+upgrade_text = "Increase [color=green] Max Health"
+cost = 25.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_60tjm"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"max_health": 100.0
+})
+upgrade_text = "Increase [color=green] Max Health"
+cost = 50.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_e7ua4"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"max_health": 100.0
+})
+upgrade_text = "Increase [color=green] Max Health"
+cost = 100.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_oerd0"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"max_health": 100.0
+})
+upgrade_text = "Increase [color=green] Max Health"
+cost = 200.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_eudnm"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"max_health": 100.0
+})
+upgrade_text = "Increase [color=green] Max Health"
+cost = 300.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_m7vyq"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"max_health": 100.0
+})
+upgrade_text = "Increase [color=green] Max Health"
+cost = 600.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpopj"]
+atlas = ExtResource("6_mpwqm")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="Resource" id="Resource_vdgk6"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"damage_multiplier": 0.1
+})
+upgrade_text = "Increase Ball [color=red] Damage"
+cost = 30.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_6c3n5"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"damage_multiplier": 0.1
+})
+upgrade_text = "Increase Ball [color=red] Damage"
+cost = 100.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_k2527"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"damage_multiplier": 0.1
+})
+upgrade_text = "Increase Ball [color=red] Damage"
+cost = 200.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_ucvn6"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"damage_multiplier": 0.1
+})
+upgrade_text = "Increase Ball [color=red] Damage"
+cost = 300.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_nuvth"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"damage_multiplier": 0.1
+})
+upgrade_text = "Increase Ball [color=red] Damage"
+cost = 400.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[sub_resource type="Resource" id="Resource_ixie3"]
+script = ExtResource("6_2hr16")
+modifiers = Dictionary[String, float]({
+"damage_multiplier": 0.1
+})
+upgrade_text = "Increase Ball [color=red] Damage"
+cost = 600.0
+metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
+
+[node name="UpgradeMenu" type="CanvasLayer" unique_id=1644143263]
+process_mode = 3
+layer = 100
+script = ExtResource("1_6gn5s")
+
+[node name="MoneyLabel" type="RichTextLabel" parent="." unique_id=1002287845]
+anchors_preset = -1
+anchor_left = 0.009000001
+anchor_top = 0.014
+anchor_right = 0.089
+anchor_bottom = 0.049000002
+offset_left = -0.52000046
+offset_top = -0.07999992
+offset_right = 0.48000336
+offset_bottom = -0.2800026
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[color=green]52$[/color]"
+script = ExtResource("1_ltp0x")
+
+[node name="MouseDamageUpgrade" type="TextureButton" parent="." unique_id=994542970 node_paths=PackedStringArray("linked_buttons")]
+anchors_preset = -1
+anchor_left = 0.47500002
+anchor_top = 0.45600003
+anchor_right = 0.52500004
+anchor_bottom = 0.544
+offset_top = -0.32000732
+offset_right = -48.00006
+offset_bottom = -47.680023
+scale = Vector2(4, 4)
+texture_normal = ExtResource("3_lpopj")
+script = ExtResource("4_f5dmy")
+upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_ttpbb"), SubResource("Resource_fm0cu"), SubResource("Resource_s2rwv"), SubResource("Resource_ojj7b"), SubResource("Resource_d2q0m"), SubResource("Resource_ou68t")])
+linked_buttons = [NodePath("../SpeedUpgrade"), NodePath("../HealthUpgrade")]
+metadata/_custom_type_script = "uid://cdmy4aqgthshu"
+
+[node name="SpeedUpgrade" type="TextureButton" parent="." unique_id=24468706]
+anchors_preset = -1
+anchor_left = 0.37500003
+anchor_top = 0.45600003
+anchor_right = 0.425
+anchor_bottom = 0.535
+offset_left = -3.0517578e-05
+offset_top = -0.32000732
+offset_right = -48.0
+offset_bottom = -41.200012
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+texture_normal = SubResource("AtlasTexture_vdgk6")
+script = ExtResource("4_f5dmy")
+upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_2hr16"), SubResource("Resource_lpopj"), SubResource("Resource_mpwqm"), SubResource("Resource_v4egn"), SubResource("Resource_d1lbs"), SubResource("Resource_dd5dw"), SubResource("Resource_0hpf0"), SubResource("Resource_02rna")])
+metadata/_custom_type_script = "uid://cdmy4aqgthshu"
+
+[node name="HealthUpgrade" type="TextureButton" parent="." unique_id=2095364106 node_paths=PackedStringArray("linked_buttons")]
+anchors_preset = -1
+anchor_left = 0.57500005
+anchor_top = 0.45600003
+anchor_right = 0.625
+anchor_bottom = 0.544
+offset_left = -6.1035156e-05
+offset_top = -0.32000732
+offset_right = -48.0
+offset_bottom = -47.680023
+scale = Vector2(4, 4)
+texture_normal = SubResource("AtlasTexture_6c3n5")
+script = ExtResource("4_f5dmy")
+upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_m70ya"), SubResource("Resource_60tjm"), SubResource("Resource_e7ua4"), SubResource("Resource_oerd0"), SubResource("Resource_eudnm"), SubResource("Resource_m7vyq"), SubResource("Resource_m7vyq")])
+linked_buttons = [NodePath("../DamageUpgrade")]
+metadata/_custom_type_script = "uid://cdmy4aqgthshu"
+
+[node name="DamageUpgrade" type="TextureButton" parent="." unique_id=1328619214]
+anchors_preset = -1
+anchor_left = 0.57500005
+anchor_top = 0.633
+anchor_right = 0.625
+anchor_bottom = 0.72200006
+offset_left = -6.1035156e-05
+offset_top = 0.23999023
+offset_right = -48.0
+offset_bottom = -47.840027
+scale = Vector2(4, 4)
+texture_normal = SubResource("AtlasTexture_lpopj")
+script = ExtResource("4_f5dmy")
+upgrades = Array[ExtResource("6_2hr16")]([SubResource("Resource_vdgk6"), SubResource("Resource_6c3n5"), SubResource("Resource_k2527"), SubResource("Resource_ucvn6"), SubResource("Resource_nuvth"), SubResource("Resource_ixie3")])
+metadata/_custom_type_script = "uid://cdmy4aqgthshu"
+
+[node name="NextLevel" type="Button" parent="." unique_id=217088264]
+process_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -42.5
+offset_top = -31.0
+offset_right = 42.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Continue"
+
+[node name="ItemDescription" type="RichTextLabel" parent="." unique_id=1757485463]
+visible = false
+z_index = 2
+custom_minimum_size = Vector2(256, 16)
+offset_right = 256.0
+offset_bottom = 23.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "test descirption"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_lhh40")
+
+[node name="ItemDescriptionBackground" type="ColorRect" parent="ItemDescription" unique_id=1163079785]
+process_mode = 3
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.47788018, 0.47788012, 0.47788012, 1)
+
+[node name="Background" type="TextureRect" parent="." unique_id=754293270]
+z_index = -1
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("8_mpwqm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=266905705]
+stream = ExtResource("9_v4egn")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
+
+[node name="FXPlayer" type="AudioStreamPlayer" parent="." unique_id=65514938]
+stream = ExtResource("10_d1lbs")

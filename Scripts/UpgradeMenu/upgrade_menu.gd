@@ -3,6 +3,10 @@ extends CanvasLayer
 @onready var item_description = $ItemDescription
 @onready var next_level = $NextLevel
 @onready var fx_player = $FXPlayer
+const UPGRADE = preload("uid://o6knacpw3rt1")
+const CLICK = preload("uid://c0x52pq83dcxr")
+const CANT_PURCHASE = preload("uid://ckpsl88cegmyr")
+var tweener
 
 func _ready():
 	hide()
@@ -27,14 +31,28 @@ func _on_upgrade_button_unhovered():
 func _attempt_buy_upgrade(button : UpgradeButton):
 	if button.can_buy_upgrade():
 		button.buy_upgarde()
+		fx_player.volume_db = 0.0
+		fx_player.stream = UPGRADE
 		fx_player.pitch_scale = randf_range(0.8,1.2)
 		fx_player.play()
 		print("Bought upgrade")
 		_on_upgrade_button_hovered(button)
 	else:
+		var tweener := get_tree().create_tween()
+		button.modulate = Color(1.0, 0.398, 0.329, 1.0)
+		tweener.tween_property(button, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.2)
 		print("can't buy!")
-		
+		fx_player.volume_db = -10.0
+		fx_player.stream = CANT_PURCHASE
+		fx_player.pitch_scale = randf_range(0.8,1.2)
+		fx_player.play()
+
 func _next_level_button_pressed():
+	
+	fx_player.volume_db = 10.0
+	fx_player.stream = CLICK
+	fx_player.pitch_scale = randf_range(0.8,1.2)
+	fx_player.play()
 	print("hiding")
 	hide()
 	get_tree().paused = false

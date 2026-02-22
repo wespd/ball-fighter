@@ -9,6 +9,7 @@ const ON_HIT_DAMAGE = preload("uid://yd7btfw7mn6e")
 const BOUNCE = preload("uid://b4jk1dnmkp701")
 const CLICK_DAMAGE = preload("uid://du34lqtrhwsk0")
 const BLIP = preload("uid://b60g3mcviu0ja")
+const DEATH = preload("uid://c484pc0hd6c25")
 
 
 @export var speed : float = 300
@@ -85,14 +86,17 @@ func take_damage(damage : float):
 	damage_effect.emitting = true
 	damage_effect.finished.connect(destroy_effect.bind(damage_effect))
 	current_health -= damage
-	UpgradeGlobals.get_money(int(damage) / 10.0, position)
 	if current_health <= 0:
+		UpgradeGlobals.get_money(int(damage + 25) / 10.0 , position)
 		on_death()
+	else:
+		UpgradeGlobals.get_money(int(damage) / 10.0, position)
 		
 func destroy_effect(effect):
 	effect.queue_free()
 		
 func on_death():
+	audio_stream_player.volume_db = 0
 	sprite_2d.visible = false
 	UpgradeGlobals.kills_this_round += 1
 	died.emit()

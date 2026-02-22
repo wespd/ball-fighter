@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dhf76eda4dvro" path="res://Sprites/Ball_death_animation.png" id="1_x1jjj"]
 [ext_resource type="Script" uid="uid://c44awxukjkiuq" path="res://Scripts/player_death.gd" id="2_kg0ev"]
+[ext_resource type="AudioStream" uid="uid://c484pc0hd6c25" path="res://sfx/Death.wav" id="3_jlttn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kg0ev"]
 atlas = ExtResource("1_x1jjj")
@@ -102,3 +103,7 @@ autoplay = "default"
 frame = 11
 frame_progress = 1.0
 script = ExtResource("2_kg0ev")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1793666811]
+stream = ExtResource("3_jlttn")
+autoplay = true

@@ -14,7 +14,7 @@ func _on_ball_entered(ball : Ball):
 	ball.is_stunned = true
 	var tweener := get_tree().create_tween()
 	tweener.tween_property(ball, "position", position, 0.4)
-	timer.start(1.0)
+	timer.start(3.0)
 	
 	
 func release_ball():
