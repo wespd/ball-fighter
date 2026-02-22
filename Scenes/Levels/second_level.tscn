@@ -91,169 +91,145 @@ color = Color(0.41598046, 0.41598043, 0.4159804, 1)
 position = Vector2(109, -239)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy2" parent="." unique_id=544365159 instance=ExtResource("5_w5mdp")]
 position = Vector2(246, 209)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy3" parent="." unique_id=290746449 instance=ExtResource("5_w5mdp")]
 position = Vector2(-186, -208)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy4" parent="." unique_id=1339087098 instance=ExtResource("5_w5mdp")]
 position = Vector2(141, 254)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy5" parent="." unique_id=2057724829 instance=ExtResource("5_w5mdp")]
 position = Vector2(-254, -183)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy6" parent="." unique_id=272068533 instance=ExtResource("5_w5mdp")]
 position = Vector2(-345, 72)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy7" parent="." unique_id=1428158021 instance=ExtResource("5_w5mdp")]
 position = Vector2(-388, -62)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy8" parent="." unique_id=915341568 instance=ExtResource("5_w5mdp")]
 position = Vector2(-335, -142)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy9" parent="." unique_id=263655649 instance=ExtResource("5_w5mdp")]
 position = Vector2(32, -252)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy10" parent="." unique_id=555814094 instance=ExtResource("5_w5mdp")]
 position = Vector2(425, -57)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy11" parent="." unique_id=1030559845 instance=ExtResource("5_w5mdp")]
 position = Vector2(262, -180)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy12" parent="." unique_id=97123879 instance=ExtResource("5_w5mdp")]
 position = Vector2(193, -221)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy13" parent="." unique_id=1866558893 instance=ExtResource("5_w5mdp")]
 position = Vector2(340, -132)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy14" parent="." unique_id=1713652692 instance=ExtResource("5_w5mdp")]
 position = Vector2(400, 86)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy15" parent="." unique_id=345935644 instance=ExtResource("5_w5mdp")]
 position = Vector2(327, 157)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy16" parent="." unique_id=49863133 instance=ExtResource("5_w5mdp")]
 position = Vector2(450, 31)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy17" parent="." unique_id=831521982 instance=ExtResource("5_w5mdp")]
 position = Vector2(-145, 231)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy18" parent="." unique_id=560743354 instance=ExtResource("5_w5mdp")]
 position = Vector2(-39, 255)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy19" parent="." unique_id=352265218 instance=ExtResource("5_w5mdp")]
 position = Vector2(-282, 130)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy20" parent="." unique_id=983383723 instance=ExtResource("5_w5mdp")]
 position = Vector2(57, 258)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy21" parent="." unique_id=1511549225 instance=ExtResource("5_w5mdp")]
 position = Vector2(-55, -245)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy22" parent="." unique_id=1051798136 instance=ExtResource("5_w5mdp")]
 position = Vector2(-214, 184)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy23" parent="." unique_id=1763505883 instance=ExtResource("5_w5mdp")]
 position = Vector2(-396, 23)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="BallEnemy24" parent="." unique_id=872955424 instance=ExtResource("5_w5mdp")]
 position = Vector2(-129, -235)
 speed = 200.0
 max_speed = 500.0
-max_health = 200.0
-damage_multiplier = 0.3
+max_health = 500.0
 
 [node name="Peg" parent="." unique_id=322305095 instance=ExtResource("4_0b5lo")]
 position = Vector2(-110, 0)

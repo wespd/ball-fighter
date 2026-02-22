@@ -32,7 +32,7 @@ theme_override_constants/separation = 74
 custom_minimum_size = Vector2(128, 50)
 layout_mode = 2
 bbcode_enabled = true
-text = "[rainbow freq=.2 sat=0.9 val=1 speed=1.0][wave amp=50.0 freq=7.0 connected=1]Working Title[/wave]"
+text = "[rainbow freq=.2 sat=0.9 val=1 speed=1.0][wave amp=50.0 freq=7.0 connected=1]Spatium ball[/wave]"
 horizontal_alignment = 1
 vertical_alignment = 1
 

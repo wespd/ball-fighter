@@ -169,3 +169,36 @@ position = Vector2(0, 110)
 
 [node name="Peg4" parent="." unique_id=1543104727 instance=ExtResource("4_4l5vx")]
 position = Vector2(0, -110)
+
+[node name="Peg5" parent="." unique_id=1976134658 instance=ExtResource("4_4l5vx")]
+position = Vector2(-492, 276)
+
+[node name="Peg6" parent="." unique_id=907204712 instance=ExtResource("4_4l5vx")]
+position = Vector2(-291, -237)
+
+[node name="Peg7" parent="." unique_id=27339384 instance=ExtResource("4_4l5vx")]
+position = Vector2(198, 157)
+
+[node name="Peg8" parent="." unique_id=382478090 instance=ExtResource("4_4l5vx")]
+position = Vector2(514, -249)
+
+[node name="Peg9" parent="." unique_id=1289145323 instance=ExtResource("4_4l5vx")]
+position = Vector2(-383, -25)
+
+[node name="Peg10" parent="." unique_id=976954265 instance=ExtResource("4_4l5vx")]
+position = Vector2(301, 319)
+
+[node name="Peg11" parent="." unique_id=1409507618 instance=ExtResource("4_4l5vx")]
+position = Vector2(-548, 110)
+
+[node name="Peg12" parent="." unique_id=469945896 instance=ExtResource("4_4l5vx")]
+position = Vector2(-533, -265)
+
+[node name="Peg13" parent="." unique_id=1134140283 instance=ExtResource("4_4l5vx")]
+position = Vector2(149, -301)
+
+[node name="Peg14" parent="." unique_id=62375714 instance=ExtResource("4_4l5vx")]
+position = Vector2(-1, -187)
+
+[node name="Peg15" parent="." unique_id=1462575446 instance=ExtResource("4_4l5vx")]
+position = Vector2(107, 296)
