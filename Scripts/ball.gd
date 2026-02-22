@@ -44,7 +44,6 @@ func _process(delta):
 	
 	if collision_info:
 		on_collision(collision_info)
-	_warp_ball()
 			
 func bounce_off_surface(normal : Vector2):
 	direction = direction.bounce(normal).normalized()

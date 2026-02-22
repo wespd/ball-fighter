@@ -1,24 +1,24 @@
 [gd_scene format=3 uid="uid://cp23roms2sjx2"]
 
 [ext_resource type="Script" uid="uid://dwsrph4ywts4u" path="res://Scripts/level.gd" id="1_i5tww"]
-[ext_resource type="Texture2D" uid="uid://o3so5u5fihlq" path="res://Sprites/Background_static_w_hole.png" id="2_4l5vx"]
+[ext_resource type="Texture2D" uid="uid://bwngmxtvl01s2" path="res://Sprites/Background_static.png" id="2_4l5vx"]
 [ext_resource type="PackedScene" uid="uid://d18bcpnidh32y" path="res://Scenes/ball.tscn" id="3_aqoxu"]
 [ext_resource type="PackedScene" uid="uid://y4gf131udgjo" path="res://Scenes/peg.tscn" id="4_4l5vx"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i5tww"]
 normal = Vector2(1, 0)
-distance = -180.0
+distance = -640.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_aqoxu"]
 normal = Vector2(-1, 0)
-distance = -180.0
+distance = -640.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4l5vx"]
 normal = Vector2(0, 1)
-distance = -180.0
+distance = -360.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_swywn"]
-distance = -180.0
+distance = -360.0
 
 [node name="FirstLevel" type="Node2D" unique_id=2094502786]
 script = ExtResource("1_i5tww")
@@ -59,7 +59,7 @@ metadata/bounce_multiplier = 1.01
 shape = SubResource("WorldBoundaryShape2D_swywn")
 
 [node name="Background" type="TextureRect" parent="." unique_id=498260788]
-z_index = 6
+z_index = -1
 z_as_relative = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -97,6 +97,66 @@ position = Vector2(-135, 0)
 
 [node name="BallEnemy4" parent="." unique_id=1339087098 instance=ExtResource("3_aqoxu")]
 position = Vector2(135, 0)
+
+[node name="BallEnemy5" parent="." unique_id=2057724829 instance=ExtResource("3_aqoxu")]
+position = Vector2(-430, -178)
+
+[node name="BallEnemy6" parent="." unique_id=272068533 instance=ExtResource("3_aqoxu")]
+position = Vector2(-430, 92)
+
+[node name="BallEnemy7" parent="." unique_id=1428158021 instance=ExtResource("3_aqoxu")]
+position = Vector2(-565, -43)
+
+[node name="BallEnemy8" parent="." unique_id=915341568 instance=ExtResource("3_aqoxu")]
+position = Vector2(-295, -43)
+
+[node name="BallEnemy9" parent="." unique_id=263655649 instance=ExtResource("3_aqoxu")]
+position = Vector2(381, -271)
+
+[node name="BallEnemy10" parent="." unique_id=555814094 instance=ExtResource("3_aqoxu")]
+position = Vector2(381, -1)
+
+[node name="BallEnemy11" parent="." unique_id=1030559845 instance=ExtResource("3_aqoxu")]
+position = Vector2(246, -136)
+
+[node name="BallEnemy12" parent="." unique_id=97123879 instance=ExtResource("3_aqoxu")]
+position = Vector2(516, -136)
+
+[node name="BallEnemy13" parent="." unique_id=1866558893 instance=ExtResource("3_aqoxu")]
+position = Vector2(392, -72)
+
+[node name="BallEnemy14" parent="." unique_id=1713652692 instance=ExtResource("3_aqoxu")]
+position = Vector2(392, 198)
+
+[node name="BallEnemy15" parent="." unique_id=345935644 instance=ExtResource("3_aqoxu")]
+position = Vector2(257, 63)
+
+[node name="BallEnemy16" parent="." unique_id=49863133 instance=ExtResource("3_aqoxu")]
+position = Vector2(527, 63)
+
+[node name="BallEnemy17" parent="." unique_id=831521982 instance=ExtResource("3_aqoxu")]
+position = Vector2(-268, 63)
+
+[node name="BallEnemy18" parent="." unique_id=560743354 instance=ExtResource("3_aqoxu")]
+position = Vector2(-268, 333)
+
+[node name="BallEnemy19" parent="." unique_id=352265218 instance=ExtResource("3_aqoxu")]
+position = Vector2(-403, 198)
+
+[node name="BallEnemy20" parent="." unique_id=983383723 instance=ExtResource("3_aqoxu")]
+position = Vector2(-133, 198)
+
+[node name="BallEnemy21" parent="." unique_id=1511549225 instance=ExtResource("3_aqoxu")]
+position = Vector2(-341, -185)
+
+[node name="BallEnemy22" parent="." unique_id=1051798136 instance=ExtResource("3_aqoxu")]
+position = Vector2(-341, 85)
+
+[node name="BallEnemy23" parent="." unique_id=1763505883 instance=ExtResource("3_aqoxu")]
+position = Vector2(-476, -50)
+
+[node name="BallEnemy24" parent="." unique_id=872955424 instance=ExtResource("3_aqoxu")]
+position = Vector2(-206, -50)
 
 [node name="Peg" parent="." unique_id=322305095 instance=ExtResource("4_4l5vx")]
 position = Vector2(-110, 0)
