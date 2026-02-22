@@ -4,6 +4,11 @@ class_name Ball
 const DIMENSIONS : Vector2 = Vector2(360,360)
 
 const ON_HIT_DAMAGE = preload("uid://yd7btfw7mn6e")
+@onready var audio_stream_player = $AudioStreamPlayer
+
+const BOUNCE = preload("uid://b4jk1dnmkp701")
+const CLICK_DAMAGE = preload("uid://du34lqtrhwsk0")
+const BLIP = preload("uid://b60g3mcviu0ja")
 
 
 @export var speed : float = 300
@@ -41,6 +46,10 @@ func _process(delta):
 	
 	if is_hovered_by_mouse and Input.is_action_just_pressed("left_click"):
 		take_damage(PlayerBall.click_damage)
+		audio_stream_player.volume_db = 0
+		audio_stream_player.pitch_scale = randf_range(0.6,1.4)
+		audio_stream_player.stream = CLICK_DAMAGE
+		audio_stream_player.play()
 	
 	if collision_info:
 		on_collision(collision_info)
@@ -52,6 +61,10 @@ func on_collision(collision_info : KinematicCollision2D):
 	var normal = collision_info.get_normal()
 	direction = direction.bounce(normal).normalized()
 	var collider = collision_info.get_collider()
+	audio_stream_player.volume_db = -10
+	audio_stream_player.pitch_scale = randf_range(0.6,1.4)
+	audio_stream_player.stream = BLIP
+	audio_stream_player.play()
 	
 	if collider == PlayerBall:
 		CollisionManager.try_collision(self, collider)

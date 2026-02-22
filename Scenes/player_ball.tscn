@@ -38,3 +38,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("3_k40wh")
 metadata/_custom_type_script = "uid://chxtqsy5t4o55"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1556570847]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://boiv6gr1qpttj"]
 
 [ext_resource type="Script" uid="uid://dxjx8f2un6x6u" path="res://Scripts/round_over_box.gd" id="1_wmeji"]
+[ext_resource type="Texture2D" uid="uid://bwngmxtvl01s2" path="res://Sprites/Background_static.png" id="2_8lxrr"]
 
 [node name="RoundOverBox" type="CanvasLayer" unique_id=1940377697]
 process_mode = 3
@@ -60,3 +61,14 @@ process_mode = 3
 custom_minimum_size = Vector2(360, 50)
 layout_mode = 2
 text = "Continue"
+
+[node name="Background" type="TextureRect" parent="." unique_id=826385997]
+z_index = -1
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_8lxrr")

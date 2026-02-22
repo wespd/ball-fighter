@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dixxpmc8rr44b" path="res://Scripts/ball.gd" id="1_41u45"]
 [ext_resource type="Texture2D" uid="uid://dhf76eda4dvro" path="res://Sprites/Ball_death_animation.png" id="2_ij5cq"]
-[ext_resource type="Script" path="res://Scripts/health_text.gd" id="3_376qj"]
+[ext_resource type="Script" uid="uid://chxtqsy5t4o55" path="res://Scripts/health_text.gd" id="3_376qj"]
+[ext_resource type="AudioStream" uid="uid://b60g3mcviu0ja" path="res://sfx/Blip.wav" id="4_yk4cr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_376qj"]
 atlas = ExtResource("2_ij5cq")
@@ -38,3 +39,6 @@ text = "test"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("3_376qj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1903057848]
+stream = ExtResource("4_yk4cr")

@@ -1,83 +1,76 @@
-[gd_scene format=3 uid="uid://c7jshwyf5wvip"]
+[gd_scene format=3 uid="uid://dwmyyfi8a556e"]
 
 [ext_resource type="Script" uid="uid://dwsrph4ywts4u" path="res://Scripts/level.gd" id="1_ob8nl"]
-[ext_resource type="Texture2D" uid="uid://bdpa11ayav36h" path="res://Sprites/test-bg.png" id="2_vbq20"]
+[ext_resource type="Texture2D" uid="uid://bwngmxtvl01s2" path="res://Sprites/Background_static.png" id="2_50mi7"]
 [ext_resource type="PackedScene" uid="uid://oncbnrfwyhb" path="res://Scenes/void_peg.tscn" id="3_pq6eg"]
 [ext_resource type="PackedScene" uid="uid://y4gf131udgjo" path="res://Scenes/peg.tscn" id="4_0b5lo"]
 [ext_resource type="PackedScene" uid="uid://d18bcpnidh32y" path="res://Scenes/ball.tscn" id="5_w5mdp"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0xm2m"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i5tww"]
 normal = Vector2(1, 0)
-distance = -180.0
+distance = -640.0
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h2yge"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_aqoxu"]
 normal = Vector2(-1, 0)
-distance = -180.0
+distance = -640.0
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bvp3"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4l5vx"]
 normal = Vector2(0, 1)
-distance = -180.0
+distance = -360.0
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7dm0k"]
-distance = -180.0
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_swywn"]
+distance = -360.0
 
-[node name="Main" type="Node2D" unique_id=1593915679]
+[node name="FirstLevel" type="Node2D" unique_id=2094502786]
 script = ExtResource("1_ob8nl")
+metadata/_custom_type_script = "uid://dwsrph4ywts4u"
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1631611814]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1044042143]
 
-[node name="LeftEdge" type="StaticBody2D" parent="." unique_id=934983038]
-position = Vector2(4, 1)
+[node name="LeftEdge" type="StaticBody2D" parent="." unique_id=873494206]
 collision_layer = 2
 collision_mask = 2
 metadata/bounce_multiplier = 1.01
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftEdge" unique_id=1972778416]
-shape = SubResource("WorldBoundaryShape2D_0xm2m")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftEdge" unique_id=546098]
+shape = SubResource("WorldBoundaryShape2D_i5tww")
 
-[node name="RightEdge" type="StaticBody2D" parent="." unique_id=1446361020]
-position = Vector2(4, 1)
+[node name="RightEdge" type="StaticBody2D" parent="." unique_id=1826834626]
 collision_layer = 2
 collision_mask = 2
 metadata/bounce_multiplier = 1.01
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightEdge" unique_id=1950896313]
-shape = SubResource("WorldBoundaryShape2D_h2yge")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightEdge" unique_id=200194276]
+shape = SubResource("WorldBoundaryShape2D_aqoxu")
 
-[node name="UpperEdge" type="StaticBody2D" parent="." unique_id=248334358]
-position = Vector2(4, 1)
+[node name="UpperEdge" type="StaticBody2D" parent="." unique_id=644621274]
 collision_layer = 2
 collision_mask = 2
 metadata/bounce_multiplier = 1.01
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperEdge" unique_id=1433374134]
-shape = SubResource("WorldBoundaryShape2D_1bvp3")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperEdge" unique_id=1586157198]
+shape = SubResource("WorldBoundaryShape2D_4l5vx")
 
-[node name="LowerEdge" type="StaticBody2D" parent="." unique_id=821329915]
-position = Vector2(4, 1)
+[node name="LowerEdge" type="StaticBody2D" parent="." unique_id=1956993251]
 collision_layer = 2
 collision_mask = 2
 metadata/bounce_multiplier = 1.01
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerEdge" unique_id=1213868640]
-shape = SubResource("WorldBoundaryShape2D_7dm0k")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerEdge" unique_id=518018355]
+shape = SubResource("WorldBoundaryShape2D_swywn")
 
-[node name="Background" type="TextureRect" parent="." unique_id=208124343]
-z_index = 6
+[node name="Background" type="TextureRect" parent="." unique_id=498260788]
+z_index = -1
 z_as_relative = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -640.0
-offset_top = -360.0
-offset_right = 640.0
-offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_vbq20")
+texture = ExtResource("2_50mi7")
 
-[node name="Boundry" type="ColorRect" parent="." unique_id=1714563956]
+[node name="Boundry" type="ColorRect" parent="." unique_id=2031653392]
 z_index = -10
 custom_minimum_size = Vector2(360, 360)
 anchors_preset = -1
@@ -94,58 +87,242 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.41598046, 0.41598043, 0.4159804, 1)
 
-[node name="VoidPeg" parent="." unique_id=1481263294 instance=ExtResource("3_pq6eg")]
-position = Vector2(-130, -130)
+[node name="BallEnemy" parent="." unique_id=1797804029 instance=ExtResource("5_w5mdp")]
+position = Vector2(109, -239)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
 
-[node name="VoidPeg2" parent="." unique_id=1509861467 instance=ExtResource("3_pq6eg")]
-position = Vector2(130, -130)
+[node name="BallEnemy2" parent="." unique_id=544365159 instance=ExtResource("5_w5mdp")]
+position = Vector2(246, 209)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
 
-[node name="VoidPeg3" parent="." unique_id=36815349 instance=ExtResource("3_pq6eg")]
-position = Vector2(-130, 130)
+[node name="BallEnemy3" parent="." unique_id=290746449 instance=ExtResource("5_w5mdp")]
+position = Vector2(-186, -208)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
 
-[node name="VoidPeg4" parent="." unique_id=848812103 instance=ExtResource("3_pq6eg")]
-position = Vector2(130, 130)
+[node name="BallEnemy4" parent="." unique_id=1339087098 instance=ExtResource("5_w5mdp")]
+position = Vector2(141, 254)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy5" parent="." unique_id=2057724829 instance=ExtResource("5_w5mdp")]
+position = Vector2(-254, -183)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy6" parent="." unique_id=272068533 instance=ExtResource("5_w5mdp")]
+position = Vector2(-345, 72)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy7" parent="." unique_id=1428158021 instance=ExtResource("5_w5mdp")]
+position = Vector2(-388, -62)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy8" parent="." unique_id=915341568 instance=ExtResource("5_w5mdp")]
+position = Vector2(-335, -142)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy9" parent="." unique_id=263655649 instance=ExtResource("5_w5mdp")]
+position = Vector2(32, -252)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy10" parent="." unique_id=555814094 instance=ExtResource("5_w5mdp")]
+position = Vector2(425, -57)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy11" parent="." unique_id=1030559845 instance=ExtResource("5_w5mdp")]
+position = Vector2(262, -180)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy12" parent="." unique_id=97123879 instance=ExtResource("5_w5mdp")]
+position = Vector2(193, -221)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy13" parent="." unique_id=1866558893 instance=ExtResource("5_w5mdp")]
+position = Vector2(340, -132)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy14" parent="." unique_id=1713652692 instance=ExtResource("5_w5mdp")]
+position = Vector2(400, 86)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy15" parent="." unique_id=345935644 instance=ExtResource("5_w5mdp")]
+position = Vector2(327, 157)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy16" parent="." unique_id=49863133 instance=ExtResource("5_w5mdp")]
+position = Vector2(450, 31)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy17" parent="." unique_id=831521982 instance=ExtResource("5_w5mdp")]
+position = Vector2(-145, 231)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy18" parent="." unique_id=560743354 instance=ExtResource("5_w5mdp")]
+position = Vector2(-39, 255)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy19" parent="." unique_id=352265218 instance=ExtResource("5_w5mdp")]
+position = Vector2(-282, 130)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy20" parent="." unique_id=983383723 instance=ExtResource("5_w5mdp")]
+position = Vector2(57, 258)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy21" parent="." unique_id=1511549225 instance=ExtResource("5_w5mdp")]
+position = Vector2(-55, -245)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy22" parent="." unique_id=1051798136 instance=ExtResource("5_w5mdp")]
+position = Vector2(-214, 184)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy23" parent="." unique_id=1763505883 instance=ExtResource("5_w5mdp")]
+position = Vector2(-396, 23)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
+
+[node name="BallEnemy24" parent="." unique_id=872955424 instance=ExtResource("5_w5mdp")]
+position = Vector2(-129, -235)
+speed = 200.0
+max_speed = 500.0
+max_health = 200.0
+damage_multiplier = 0.3
 
 [node name="Peg" parent="." unique_id=322305095 instance=ExtResource("4_0b5lo")]
 position = Vector2(-110, 0)
 
-[node name="Peg2" parent="." unique_id=162801599 instance=ExtResource("4_0b5lo")]
+[node name="Peg2" parent="." unique_id=1174248728 instance=ExtResource("4_0b5lo")]
 position = Vector2(110, 0)
 
-[node name="Peg3" parent="." unique_id=1529483174 instance=ExtResource("4_0b5lo")]
+[node name="Peg3" parent="." unique_id=1397873201 instance=ExtResource("4_0b5lo")]
 position = Vector2(0, 110)
 
-[node name="Peg4" parent="." unique_id=978199457 instance=ExtResource("4_0b5lo")]
+[node name="Peg4" parent="." unique_id=1543104727 instance=ExtResource("4_0b5lo")]
 position = Vector2(0, -110)
 
-[node name="Ball" parent="." unique_id=260139811 instance=ExtResource("5_w5mdp")]
-z_index = 5
-position = Vector2(150, 0)
+[node name="Peg5" parent="." unique_id=1995243887 instance=ExtResource("4_0b5lo")]
+position = Vector2(-506, 0)
 
-[node name="Ball2" parent="." unique_id=1797804029 instance=ExtResource("5_w5mdp")]
-z_index = 5
-position = Vector2(-96, 13)
+[node name="Peg6" parent="." unique_id=1769974547 instance=ExtResource("4_0b5lo")]
+position = Vector2(-286, 0)
 
-[node name="Ball3" parent="." unique_id=874225738 instance=ExtResource("5_w5mdp")]
-z_index = 5
-position = Vector2(0, 150)
+[node name="Peg7" parent="." unique_id=125263124 instance=ExtResource("4_0b5lo")]
+position = Vector2(-396, 110)
 
-[node name="Ball4" parent="." unique_id=173029196 instance=ExtResource("5_w5mdp")]
-z_index = 5
-position = Vector2(0, -150)
+[node name="Peg8" parent="." unique_id=946887545 instance=ExtResource("4_0b5lo")]
+position = Vector2(-396, -110)
 
-[node name="Ball5" parent="." unique_id=974633676 instance=ExtResource("5_w5mdp")]
-z_index = 5
-position = Vector2(150, 150)
+[node name="Peg9" parent="." unique_id=2101211552 instance=ExtResource("4_0b5lo")]
+position = Vector2(286, 0)
 
-[node name="Ball6" parent="." unique_id=1037508977 instance=ExtResource("5_w5mdp")]
-z_index = 5
-position = Vector2(-150, 150)
+[node name="Peg10" parent="." unique_id=1399254140 instance=ExtResource("4_0b5lo")]
+position = Vector2(506, 0)
 
-[node name="Ball7" parent="." unique_id=1915835903 instance=ExtResource("5_w5mdp")]
-z_index = 5
-position = Vector2(-150, -150)
+[node name="Peg11" parent="." unique_id=1223275218 instance=ExtResource("4_0b5lo")]
+position = Vector2(396, 110)
 
-[node name="Ball8" parent="." unique_id=1999696593 instance=ExtResource("5_w5mdp")]
-z_index = 5
-position = Vector2(150, -150)
+[node name="Peg12" parent="." unique_id=742372455 instance=ExtResource("4_0b5lo")]
+position = Vector2(396, -110)
+
+[node name="VoidPeg" parent="." unique_id=1481263294 instance=ExtResource("3_pq6eg")]
+position = Vector2(-414, 251)
+
+[node name="VoidPeg2" parent="." unique_id=948598003 instance=ExtResource("3_pq6eg")]
+position = Vector2(-281, -268)
+
+[node name="VoidPeg3" parent="." unique_id=739884842 instance=ExtResource("3_pq6eg")]
+position = Vector2(284, 302)
+
+[node name="VoidPeg4" parent="." unique_id=111009151 instance=ExtResource("3_pq6eg")]
+position = Vector2(154, -179)
+
+[node name="VoidPeg5" parent="." unique_id=1918111170 instance=ExtResource("3_pq6eg")]
+position = Vector2(-548, -244)
+
+[node name="VoidPeg6" parent="." unique_id=1496694009 instance=ExtResource("3_pq6eg")]
+position = Vector2(-580, 103)
+
+[node name="VoidPeg7" parent="." unique_id=916635105 instance=ExtResource("3_pq6eg")]
+position = Vector2(55, -57)
+
+[node name="VoidPeg8" parent="." unique_id=438450225 instance=ExtResource("3_pq6eg")]
+position = Vector2(-42, 40)
+
+[node name="VoidPeg9" parent="." unique_id=185818024 instance=ExtResource("3_pq6eg")]
+position = Vector2(-162, -165)
+
+[node name="VoidPeg10" parent="." unique_id=1497455234 instance=ExtResource("3_pq6eg")]
+position = Vector2(436, -279)
+
+[node name="VoidPeg11" parent="." unique_id=1473250281 instance=ExtResource("3_pq6eg")]
+position = Vector2(264, 69)
+
+[node name="VoidPeg12" parent="." unique_id=1250594751 instance=ExtResource("3_pq6eg")]
+position = Vector2(515, -110)

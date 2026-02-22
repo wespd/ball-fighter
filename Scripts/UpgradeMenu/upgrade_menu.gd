@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var item_description = $ItemDescription
 @onready var next_level = $NextLevel
+@onready var fx_player = $FXPlayer
 
 func _ready():
 	hide()
@@ -26,8 +27,9 @@ func _on_upgrade_button_unhovered():
 func _attempt_buy_upgrade(button : UpgradeButton):
 	if button.can_buy_upgrade():
 		button.buy_upgarde()
+		fx_player.pitch_scale = randf_range(0.8,1.2)
+		fx_player.play()
 		print("Bought upgrade")
-		print(PlayerBall.max_speed)
 		_on_upgrade_button_hovered(button)
 	else:
 		print("can't buy!")

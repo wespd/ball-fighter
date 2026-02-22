@@ -25,6 +25,10 @@ func on_collision(collision_info : KinematicCollision2D):
 	
 	direction = direction.bounce(normal).normalized()
 	
+	audio_stream_player.pitch_scale = randf_range(0.6,1.4)
+	audio_stream_player.stream = BOUNCE
+	audio_stream_player.play()
+	
 	var collider = collision_info.get_collider()
 	if collider is Ball:
 		CollisionManager.try_collision(self, collider)
