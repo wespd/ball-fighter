@@ -25,22 +25,6 @@ metadata/_custom_type_script = "uid://dixxpmc8rr44b"
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1006215520]
 texture = SubResource("AtlasTexture_376qj")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=585886030]
-position = Vector2(-360, 0)
-texture = SubResource("AtlasTexture_376qj")
-
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=812901115]
-position = Vector2(360, 0)
-texture = SubResource("AtlasTexture_376qj")
-
-[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1387858394]
-position = Vector2(0, 360)
-texture = SubResource("AtlasTexture_376qj")
-
-[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1229625356]
-position = Vector2(0, -360)
-texture = SubResource("AtlasTexture_376qj")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1209233224]
 shape = SubResource("CircleShape2D_41u45")
 
