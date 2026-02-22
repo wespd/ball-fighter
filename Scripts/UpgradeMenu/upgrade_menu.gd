@@ -53,7 +53,10 @@ func _next_level_button_pressed():
 	fx_player.stream = CLICK
 	fx_player.pitch_scale = randf_range(0.8,1.2)
 	fx_player.play()
+	Transition.transition()
+	await Transition.transition_hidden
 	print("hiding")
 	hide()
 	get_tree().paused = false
+	
 	LevelManager.spawn_level()

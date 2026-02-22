@@ -3,7 +3,12 @@
 [ext_resource type="Script" uid="uid://cermkwjth8tnn" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="Texture2D" uid="uid://bwngmxtvl01s2" path="res://Sprites/Background_static.png" id="2_1ehe0"]
 [ext_resource type="Texture2D" uid="uid://csk8tm4nqx4kg" path="res://Sprites/play_button.png" id="2_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://c2a033fiplrr5" path="res://Sprites/title.png" id="2_n45e2"]
 [ext_resource type="AudioStream" uid="uid://c0x52pq83dcxr" path="res://sfx/Click.wav" id="3_ce3w2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp0ys"]
+atlas = ExtResource("2_n45e2")
+region = Rect2(0, 0, 360, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n45e2"]
 atlas = ExtResource("2_ce3w2")
@@ -28,13 +33,9 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_constants/separation = 74
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=681376075]
-custom_minimum_size = Vector2(128, 50)
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=531190137]
 layout_mode = 2
-bbcode_enabled = true
-text = "[rainbow freq=.2 sat=0.9 val=1 speed=1.0][wave amp=50.0 freq=7.0 connected=1]Spatium ball[/wave]"
-horizontal_alignment = 1
-vertical_alignment = 1
+texture = SubResource("AtlasTexture_cp0ys")
 
 [node name="Button" type="TextureButton" parent="VBoxContainer" unique_id=1183978944]
 layout_mode = 2

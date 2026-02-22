@@ -4,6 +4,8 @@ const MONEY_UP = preload("uid://cji2nyfbdyjvq")
 
 var money : float = 0.0
 
+var round_number : int = 1
+
 var money_this_round = 0
 var kills_this_round = 0
 

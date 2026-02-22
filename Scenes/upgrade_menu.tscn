@@ -142,7 +142,7 @@ modifiers = Dictionary[String, float]({
 "max_speed": 100.0,
 "starting_speed": 100.0
 })
-upgrade_text = "Starting [color=blue]Speed[/color] and [color=blue]Max Speed[/color] up. Hint: [color=red] Damage [/color] scales with [color=blue] Speed"
+upgrade_text = "Starting [color=blue]Speed[/color] and [color=blue]Max Speed[/color] up"
 cost = 5.0
 metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
 
@@ -248,7 +248,7 @@ modifiers = Dictionary[String, float]({
 "speed_damage_multiplier": 0.05
 })
 upgrade_text = "Increase [color=red] Damage [/color] by the Ball's [color=blue] Speed"
-cost = 1000.0
+cost = 750.0
 metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
 
 [sub_resource type="Resource" id="Resource_uv1ro"]
@@ -257,7 +257,7 @@ modifiers = Dictionary[String, float]({
 "speed_damage_multiplier": 0.05
 })
 upgrade_text = "Increase [color=red] Damage [/color] by the Ball's [color=blue] Speed"
-cost = 2000.0
+cost = 1000.0
 metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
 
 [sub_resource type="Resource" id="Resource_yr6i7"]
@@ -266,7 +266,7 @@ modifiers = Dictionary[String, float]({
 "speed_damage_multiplier": 0.05
 })
 upgrade_text = "Increase [color=red] Damage [/color] by the Ball's [color=blue] Speed"
-cost = 4000.0
+cost = 2000.0
 metadata/_custom_type_script = "uid://bkoa4ueuuudr3"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6c3n5"]

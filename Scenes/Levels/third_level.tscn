@@ -2,23 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dwsrph4ywts4u" path="res://Scripts/level.gd" id="1_xjrbp"]
 [ext_resource type="Texture2D" uid="uid://bwngmxtvl01s2" path="res://Sprites/Background_static.png" id="2_7suab"]
-[ext_resource type="PackedScene" uid="uid://y4gf131udgjo" path="res://Scenes/peg.tscn" id="4_ttieu"]
-[ext_resource type="PackedScene" uid="uid://oncbnrfwyhb" path="res://Scenes/void_peg.tscn" id="5_vyi25"]
+[ext_resource type="Texture2D" uid="uid://c2a033fiplrr5" path="res://Sprites/title.png" id="3_7tc52"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i5tww"]
-normal = Vector2(1, 0)
-distance = -640.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_aqoxu"]
-normal = Vector2(-1, 0)
-distance = -640.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4l5vx"]
-normal = Vector2(0, 1)
-distance = -360.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_swywn"]
-distance = -360.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmpkc"]
+atlas = ExtResource("3_7tc52")
+region = Rect2(102, 133, 146, 123)
 
 [node name="FirstLevel" type="Node2D" unique_id=2094502786]
 script = ExtResource("1_xjrbp")
@@ -26,40 +14,8 @@ metadata/_custom_type_script = "uid://dwsrph4ywts4u"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1044042143]
 
-[node name="LeftEdge" type="StaticBody2D" parent="." unique_id=873494206]
-collision_layer = 2
-collision_mask = 2
-metadata/bounce_multiplier = 1.01
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftEdge" unique_id=546098]
-shape = SubResource("WorldBoundaryShape2D_i5tww")
-
-[node name="RightEdge" type="StaticBody2D" parent="." unique_id=1826834626]
-collision_layer = 2
-collision_mask = 2
-metadata/bounce_multiplier = 1.01
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightEdge" unique_id=200194276]
-shape = SubResource("WorldBoundaryShape2D_aqoxu")
-
-[node name="UpperEdge" type="StaticBody2D" parent="." unique_id=644621274]
-collision_layer = 2
-collision_mask = 2
-metadata/bounce_multiplier = 1.01
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperEdge" unique_id=1586157198]
-shape = SubResource("WorldBoundaryShape2D_4l5vx")
-
-[node name="LowerEdge" type="StaticBody2D" parent="." unique_id=1956993251]
-collision_layer = 2
-collision_mask = 2
-metadata/bounce_multiplier = 1.01
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerEdge" unique_id=518018355]
-shape = SubResource("WorldBoundaryShape2D_swywn")
-
 [node name="Background" type="TextureRect" parent="." unique_id=498260788]
-z_index = -1
+z_index = 33
 z_as_relative = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,91 +25,18 @@ grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("2_7suab")
 
-[node name="Boundry" type="ColorRect" parent="." unique_id=2031653392]
-z_index = -10
-custom_minimum_size = Vector2(360, 360)
-anchors_preset = -1
-anchor_left = 0.35900003
-anchor_top = 0.25
-anchor_right = 0.64100003
-anchor_bottom = 0.75000006
-offset_left = -180.0
-offset_top = -180.0
-offset_right = 180.0
-offset_bottom = 180.0
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2028888402]
+z_index = 34
+z_as_relative = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-color = Color(0.41598046, 0.41598043, 0.4159804, 1)
-
-[node name="Peg" parent="." unique_id=322305095 instance=ExtResource("4_ttieu")]
-position = Vector2(-110, 0)
-
-[node name="Peg2" parent="." unique_id=1174248728 instance=ExtResource("4_ttieu")]
-position = Vector2(110, 0)
-
-[node name="Peg3" parent="." unique_id=1397873201 instance=ExtResource("4_ttieu")]
-position = Vector2(0, 110)
-
-[node name="Peg4" parent="." unique_id=1543104727 instance=ExtResource("4_ttieu")]
-position = Vector2(0, -110)
-
-[node name="Peg5" parent="." unique_id=1995243887 instance=ExtResource("4_ttieu")]
-position = Vector2(-506, 0)
-
-[node name="Peg6" parent="." unique_id=1769974547 instance=ExtResource("4_ttieu")]
-position = Vector2(-286, 0)
-
-[node name="Peg7" parent="." unique_id=125263124 instance=ExtResource("4_ttieu")]
-position = Vector2(-396, 110)
-
-[node name="Peg8" parent="." unique_id=946887545 instance=ExtResource("4_ttieu")]
-position = Vector2(-396, -110)
-
-[node name="Peg9" parent="." unique_id=2101211552 instance=ExtResource("4_ttieu")]
-position = Vector2(286, 0)
-
-[node name="Peg10" parent="." unique_id=1399254140 instance=ExtResource("4_ttieu")]
-position = Vector2(506, 0)
-
-[node name="Peg11" parent="." unique_id=1223275218 instance=ExtResource("4_ttieu")]
-position = Vector2(396, 110)
-
-[node name="Peg12" parent="." unique_id=742372455 instance=ExtResource("4_ttieu")]
-position = Vector2(396, -110)
-
-[node name="VoidPeg" parent="." unique_id=1481263294 instance=ExtResource("5_vyi25")]
-position = Vector2(-414, 251)
-
-[node name="VoidPeg2" parent="." unique_id=948598003 instance=ExtResource("5_vyi25")]
-position = Vector2(-281, -268)
-
-[node name="VoidPeg3" parent="." unique_id=739884842 instance=ExtResource("5_vyi25")]
-position = Vector2(284, 302)
-
-[node name="VoidPeg4" parent="." unique_id=111009151 instance=ExtResource("5_vyi25")]
-position = Vector2(154, -179)
-
-[node name="VoidPeg5" parent="." unique_id=1918111170 instance=ExtResource("5_vyi25")]
-position = Vector2(-548, -244)
-
-[node name="VoidPeg6" parent="." unique_id=1496694009 instance=ExtResource("5_vyi25")]
-position = Vector2(-580, 103)
-
-[node name="VoidPeg7" parent="." unique_id=916635105 instance=ExtResource("5_vyi25")]
-position = Vector2(55, -57)
-
-[node name="VoidPeg8" parent="." unique_id=438450225 instance=ExtResource("5_vyi25")]
-position = Vector2(-42, 40)
-
-[node name="VoidPeg9" parent="." unique_id=185818024 instance=ExtResource("5_vyi25")]
-position = Vector2(-162, -165)
-
-[node name="VoidPeg10" parent="." unique_id=1497455234 instance=ExtResource("5_vyi25")]
-position = Vector2(436, -279)
-
-[node name="VoidPeg11" parent="." unique_id=1473250281 instance=ExtResource("5_vyi25")]
-position = Vector2(264, 69)
-
-[node name="VoidPeg12" parent="." unique_id=1250594751 instance=ExtResource("5_vyi25")]
-position = Vector2(515, -110)
+texture = SubResource("AtlasTexture_gmpkc")
