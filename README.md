@@ -1,4 +1,4 @@
-# The Tower 🏰
+# The Tower 
 
 > A snappy, momentum-based 2D platformer built in 48 hours for the **GMTK 2025 Game Jam**. 
 
@@ -17,8 +17,8 @@
 * **Snappy Controls:** Fine-tuned input handling to ensure responsive movement, with quick-reset functionality mapped to the 'R' key.
 
 ## 🛠️ Built With
-* **Engine:** Godot Engine (v[Insert Version Number Here])
-* **Language:** [GDScript or C# - specify which one you used]
+* **Engine:** Godot Engine (v4.6)
+* **Language:** GDScript
 * **Version Control:** Git & GitHub
 
 ## 🚀 How to Run Locally
